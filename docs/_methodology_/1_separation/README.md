@@ -1,3 +1,4 @@
+<!-- PATH: docs/_methodology_/1_separation/README.md -->
 ## Separação de informações de referência
 
 ## Descrição

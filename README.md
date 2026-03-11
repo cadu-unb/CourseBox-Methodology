@@ -1,48 +1,69 @@
-# CourseBox: processamento para o CPLP/ArcTel
+<!-- PATH: RAIZ DO PROJETO -->
+# CourseBox
 
-## Índice
+Repositório estratégico para a construção, tratamento e organização de cursos na plataforma [CourseBox](https://coursebox.ai).
 
-<!-- Fazer -->
+## 📌 Índice
 
-## Objetivo
+- [CourseBox](#coursebox)
+  - [📌 Índice](#-índice)
+  - [🎯 Objetivo](#-objetivo)
+  - [🛤️ Metodologia](#️-metodologia)
+    - [Fase 1: Construção Individual](#fase-1-construção-individual)
+    - [Fase 2: Reavaliação por Pares](#fase-2-reavaliação-por-pares)
+    - [Fase 3: Refinamento Estético](#fase-3-refinamento-estético)
+  - [💼 Fluxo de Trabalho](#-fluxo-de-trabalho)
+  - [✳️ Quadro Resumo](#️-quadro-resumo)
+  - [🛠️ Instalação e Setup](#️-instalação-e-setup)
+    - [1. Instalando o `uv`](#1-instalando-o-uv)
+    - [2. Doxygen (Opicional)](#2-doxygen-opicional)
 
-Este repositório organiza os procedimentos necessários para construir cursos utilizando a plataforma [CourseBox](https://coursebox.ai). A metodologia aqui proposta será utlizada para construir o material supplementar (e substitutivo em caso de ausência das atividades síncrionas) para as aulas que serão realizadas no período de 19/05/2026 à 10/09/2026 referêntes ao curso ARCTEL de "Empoderamento de Lideranças Femininas".
+## 🎯 Objetivo
 
-## Metodologia
+Este repositório centraliza os procedimentos técnicos e pedagógicos para a criação de cursos estruturados via IA. A metodologia aqui proposta é aplicada em:
 
-#### A estratégia de construção passará pelas etapas
+1.  **Curso ARCTEL "Empoderamento de Lideranças Femininas"**: Construção de material suplementar e substitutivo para as aulas síncronas (período de 19/05/2026 a 10/09/2026).
+2.  **IAClube**: Desenvolvimento de cursos sobre Ferramentas de IA para o portal [iaclube.help](https://iaclube.help) e projetos vinculados a editais da FAPDF.
 
-1. [Separação de informações de referência](1_separation/README.md)
-   1. Ementa -> Separar conteúdo relacionado
-   2. Aula Síncrono -> Transcrição
-2. [Tratamento](2_treatment/README.md)
-   1. Construção de Roteiro
-   2. Anexar material construido à dataBase
-3. [Operação do assitente _CourseBox_](3_operation/README.md)
-4. [Revisão dos resultados](4_revisao/README.md)
+## 🛤️ Metodologia
 
-#### Reavaliação do Resultados
-5. [FeedBack Cruzado](5_feedback/README.md)
-6. [Correções baseados nos FeedBack](6_improviment/README.md)
+O processo de trabalho é dividido em três fases fundamentais:
 
-#### Refinamento estético
-7. (Extra) [Aperfeiçoamento da apresentação do conteúdo](7_personalizar/)
+### Fase 1: Construção Individual
+1.  **[Separação de Referências](docs/_methodology_/1_separation/README.md)**: Triagem de ementas e transcrição de aulas síncronas.
+2.  **[Tratamento](docs/_methodology_/2_treatment/README.md)**: Elaboração de roteiros e alimentação da base de dados.
+3.  **[Operação CourseBox](docs/_methodology_/3_operation/README.md)**: Configuração do assistente de IA na plataforma.
+4.  **[Revisão Técnica](docs/_methodology_/4_review/README.md)**: Auditoria inicial dos resultados gerados.
 
-### Justificativa
+### Fase 2: Reavaliação por Pares
+5.  **[Feedback Cruzado](docs/_methodology_/5_feedback/README.md)**: Validação do conteúdo por outros membros da equipe.
+6.  **[Melhoria Contínua](docs/_methodology_/6_improvement/README.md)**: Implementação de correções baseadas nos feedbacks.
 
-Foram fornecedos um conjunto de documentos encontrados na seção [Quadro Resumo](#quadro-resumo), no entanto esses documentos possuem vários assuntos além dos especificados em cada curso. Além dos documentos teremos as gravação das aulas síncronas, que poderão ou não ter um arquivo de transcrição assossiado e logo será necessária uma estapa de transcrição (via _software_) para tornar essa informação disponível para a etapa que se segue.
+### Fase 3: Refinamento Estético
+7.  **[Personalização](docs/_methodology_/7_customization/README.md)**: Aperfeiçoamento da apresentação e experiência do usuário (UX).
 
-O segundo momento será crucial para definir a qualidade do resultado obtidos com o assitente de IA da plataforma [CourseBox](https://www.coursebox.ai/). Tomando a transcrição iremos construir um conjunto de **[Notas de Aula](_Notas-de-Aula_/)** para roteirizar o conteúdo abordado com precisão. O processo de transformação pode ser feito com a ajuda de IA (ChatGPT, Gemini, Grok...), em seguida começa uma revisão da estrutura proposta, um desenvolvimento manual de conceitos, exemplos e estruturas afins.
+## 💼 Fluxo de Trabalho
 
-De posse das Notas de Aula aperfeiçoadas, com os assunto descritos de maneira mais aprofundada, vamos ajuntar esse arquivo à pasta [Notas de Aula](_Notas-de-Aula_/) para fins de controle e em seguida inserir na plataforma [CourseBox](https://www.coursebox.ai/). Neste momento serão realizados os precedimentos mais detalhados na seção [CourseBox](3_operation/README.md).
+Foi fornecido um conjunto de documentos, listados na seção [Quadro Resumo](#quadro-resumo). No entanto, esses materiais abordam diversos temas além daqueles especificamente previstos em cada curso. Além dos documentos, também teremos as gravações das aulas síncronas, que poderão ou não possuir arquivos de transcrição associados. Assim, será necessária uma etapa de transcrição (vide [_software_](docs/_methodology_/1_separation/README.md)) para tornar esse conteúdo textual disponível para as etapas subsequentes.
 
-Após o tempo de processamento do curso pela plataforma [CourseBox](https://www.coursebox.ai/)
+O segundo momento será crucial para definir a qualidade dos resultados obtidos com o assistente de IA da plataforma [CourseBox](https://www.coursebox.ai/). A partir das transcrições, iremos construir um conjunto de **[Notas de Aula](docs/lecture-notes/README.md)** com o objetivo de [roteirizar o conteúdo](docs/_methodology_/2_treatment/README.md) abordado de forma precisa e estruturada. Esse processo de transformação poderá ser realizado com o auxílio de ferramentas de IA (ChatGPT, Gemini, Grok, entre outras). Em seguida, inicia-se uma etapa de revisão da estrutura proposta, acompanhada do desenvolvimento manual de conceitos, exemplos e demais elementos didáticos necessários.
 
+De posse das Notas de Aula já aperfeiçoadas, com os assuntos descritos de maneira mais aprofundada, o arquivo será adicionado à pasta [Notas de Aula](docs/lecture-notes/README.md) para fins de organização e controle. Em seguida, esse material será inserido na plataforma [CourseBox](https://www.coursebox.ai/). Nesse momento, serão realizados os procedimentos detalhados descritos na seção [CourseBox](3_operation/README.md).
+
+Após o processamento do curso pela plataforma [CourseBox](https://www.coursebox.ai/), a primeira fase se encerra com uma revisão manual dos cursos gerados.
+
+A segunda etapa passa a depender de um protagonismo maior do grupo de trabalho. Cada integrante deverá realizar os cursos produzidos, registrando possíveis equívocos, inconsistências ou alucinações da IA que eventualmente tenham passado despercebidos durante a rodada inicial de revisões individuais.
+
+Esse retorno será realizado em formato de feedback (ver modelo em [feedback](docs/_methodology_/5_feedback/README.md)).
+
+Na etapa seguinte, cada autor de curso realizará a apuração individual das observações recebidas, analisando e incorporando as particularidades identificadas pelos colegas. Com isso, conclui-se a segunda fase do processo.
+
+A última etapa da construção dos cursos consiste na definição manual de estrutura e design por parte dos membros responsáveis pelo design. O objetivo é realizar um refinamento estético dos cursos, aperfeiçoando sua apresentação visual e experiência de uso (vide [Personalizar](docs/_methodology_/7_personalize/README.md)).
 
 <!-- Não altere o "Quadro Resumo" -->
-## Quadro Resumo
+## ✳️ Quadro Resumo
 
-| Módulo | Título do Conteúdo | Datas | Duração | Ementa |
+| Módulo | Título do Conteúdo | Datas | Duração ****| Ementa |
 | :--- | :--- | :---: | :---: | :--- |
 | **01** | [Impactos do Ecossistema Digital na Comunicação Social](https://drive.google.com/file/d/1FifuaZBgfqAmyBgaVdEdfKn4oPvHhw60/view?usp=drive_link) | 19/05 e 21/05 | 4h | Mudanças estruturais na organização, produção e consumo de comunicação social (rádio, TV e imprensa). Estudo de caso do Grupo Globo. |
 | **02** | [Desenho regulatório responsivo](https://drive.google.com/file/d/1xJYEcPiN3cbVy2PaBFzTPyb62SDfv6T7/view?usp=sharing) | 26/05 e 28/05 | 4h | Conceitos fundamentais, fluxo regulatório, estágios da regulação responsiva, pirâmides responsivas e estudo de casos. |
@@ -55,3 +76,20 @@ Após o tempo de processamento do curso pela plataforma [CourseBox](https://www.
 | **09** | [Convergência tecnológica: impacto das OTT’s](https://drive.google.com/file/d/14qpYo0VT2c1kudV1spTjnp1pCza8pCNe/view?usp=sharing) | 11/08 a 20/08 | 8h | Arquiteturas tecnológicas, dinâmica de competição entre operadoras e OTT’s e impacto nas receitas (ARPU). |
 | **10** | [Cenários prospectivos do futuro da Internet](https://drive.google.com/file/d/14qpYo0VT2c1kudV1spTjnp1pCza8pCNe/view?usp=sharing) | 25/08 a 03/09 | 8h | Personalização, privacidade, Web 3.0, Metaverso, IA, Blockchain e segurança cibernética. |
 | **11** | Oficina com Lideranças Regulatórias | 08/09 e 10/09 | 4h | Papel da mulher na regulação e tecnologia, estratégias de liderança, inovação com equidade e redes de apoio. |
+<!-- Não altere o "Quadro Resumo" -->
+
+---
+
+## 🛠️ Instalação e Setup
+
+Este projeto utiliza o **[uv](https://docs.astral.sh/uv/)** como gerenciador de pacotes para garantir velocidade e reprodutibilidade.
+
+### 1. Instalando o `uv`
+No Windows (PowerShell):
+```powershell
+powershell -ExecutionPolicy ByPass -c "irm [https://astral.sh/uv/install.ps1](https://astral.sh/uv/install.ps1) | iex"
+```
+
+### 2. Doxygen (Opicional)
+
+- **Página de Referência** : [link](https://www.doxygen.nl/download.html).

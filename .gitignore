@@ -6,6 +6,11 @@ dist/
 wheels/
 *.egg-info
 
+# Waste
+tree_focada.txt
+caminhos.txt
+docs/doxygen/html/
+
 # Virtual Environments
 .venv
 
