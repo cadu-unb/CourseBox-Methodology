@@ -1,0 +1,4 @@
+Ferrametnas:
+- GPT
+- Claude
+- MagicPlan
