@@ -1,6 +1,4 @@
-
-
-
+<!-- PATH: ./comandos-uteis.md -->
 ## Comandos úties
 
 ### Na raiz do projeto
@@ -18,5 +16,5 @@ uv add {nome_do_pacote}
 - Para criar uma arvore de arquivos para nos ajudar a descrever e debugar o código:
 
 ```cmd
-uv run python src/tools/FileTree.py
+uv run python 2_devtools/py/file_tree.py
 ```

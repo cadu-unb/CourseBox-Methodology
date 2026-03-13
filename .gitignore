@@ -9,7 +9,7 @@ wheels/
 # Waste
 tree_focada.txt
 caminhos.txt
-docs/doxygen/html/
+0_docs/doxygen/html/
 
 # Virtual Environments
 .venv

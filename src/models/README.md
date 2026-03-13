@@ -1,1 +1,0 @@
-<!-- PATH: src/models/README.md -->

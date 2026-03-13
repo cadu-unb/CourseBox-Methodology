@@ -1,1 +1,0 @@
-<!-- PATH: docs/doxygen/README.md -->

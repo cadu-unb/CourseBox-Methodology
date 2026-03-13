@@ -1,1 +1,0 @@
-<!-- PATH: src/tools/README.md -->

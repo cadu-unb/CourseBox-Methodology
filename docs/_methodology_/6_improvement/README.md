@@ -1,1 +1,0 @@
-<!-- PATH: docs/_methodology_/6_improvement/README.md -->
