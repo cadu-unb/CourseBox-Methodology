@@ -12,10 +12,10 @@ Repositório estratégico para a construção, tratamento e organização de cur
     - [1. Instalando o `uv`](#1-instalando-o-uv)
     - [2. Doxygen (Opicional)](#2-doxygen-opicional)
   - [🏗️ Estrutura do projeto](#️-estrutura-do-projeto)
-    - [0\_docs](#0_docs)
-    - [1\_src](#1_src)
-    - [2\_devtools](#2_devtools)
-    - [3\_data](#3_data)
+    - [📁 0\_docs](#-0_docs)
+    - [📁 1\_src](#-1_src)
+    - [📁 2\_devtools](#-2_devtools)
+    - [📁 3\_data](#-3_data)
   - [🛤️ Metodologia](#️-metodologia)
     - [Fase 1: Construção Individual](#fase-1-construção-individual)
     - [Fase 2: Reavaliação por Pares](#fase-2-reavaliação-por-pares)
@@ -65,7 +65,7 @@ Cada diretório possui uma responsabilidade específica dentro do projeto.
 
 ---
 
-### 0_docs
+### 📁 0_docs
 
 Contém **toda a documentação conceitual, metodológica e técnica** do projeto.
 
@@ -97,7 +97,7 @@ Subpastas:
 
 ---
 
-### 1_src
+### 📁 1_src
 
 Contém **todo o código fonte do projeto**.
 
@@ -126,7 +126,7 @@ Componentes principais:
 
 ---
 
-### 2_devtools
+### 📁 2_devtools
 
 Contém **ferramentas auxiliares utilizadas durante o desenvolvimento**.
 
@@ -144,7 +144,7 @@ O script `file_tree.py` é utilizado para gerar automaticamente a **árvore de d
 
 ---
 
-### 3_data
+### 📁 3_data
 
 Armazena **dados utilizados nos pipelines do projeto**.
 
