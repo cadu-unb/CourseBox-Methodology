@@ -8,15 +8,15 @@ Repositório estratégico para a construção, tratamento e organização de cur
 - [CourseBox](#coursebox)
   - [📌 Índice](#-índice)
   - [🎯 Objetivo](#-objetivo)
+  - [�️ Instalação e Setup](#️-instalação-e-setup)
+    - [1. Instalando o `uv`](#1-instalando-o-uv)
+    - [2. Doxygen (Opicional)](#2-doxygen-opicional)
   - [🛤️ Metodologia](#️-metodologia)
     - [Fase 1: Construção Individual](#fase-1-construção-individual)
     - [Fase 2: Reavaliação por Pares](#fase-2-reavaliação-por-pares)
     - [Fase 3: Refinamento Estético](#fase-3-refinamento-estético)
   - [💼 Fluxo de Trabalho](#-fluxo-de-trabalho)
   - [✳️ Quadro Resumo](#️-quadro-resumo)
-  - [🛠️ Instalação e Setup](#️-instalação-e-setup)
-    - [1. Instalando o `uv`](#1-instalando-o-uv)
-    - [2. Doxygen (Opicional)](#2-doxygen-opicional)
 
 ## 🎯 Objetivo
 
@@ -24,6 +24,20 @@ Este repositório centraliza os procedimentos técnicos e pedagógicos para a cr
 
 1.  **Curso ARCTEL "Empoderamento de Lideranças Femininas"**: Construção de material suplementar e substitutivo para as aulas síncronas (período de 19/05/2026 a 10/09/2026).
 2.  **IAClube**: Desenvolvimento de cursos sobre Ferramentas de IA para o portal [iaclube.help](https://iaclube.help) e projetos vinculados a editais da FAPDF.
+
+## 🛠️ Instalação e Setup
+
+Este projeto utiliza o **[uv](https://docs.astral.sh/uv/)** como gerenciador de pacotes para garantir velocidade e reprodutibilidade.
+
+### 1. Instalando o `uv`
+No Windows (PowerShell):
+```powershell
+powershell -ExecutionPolicy ByPass -c "irm [https://astral.sh/uv/install.ps1](https://astral.sh/uv/install.ps1) | iex"
+```
+
+### 2. Doxygen (Opicional)
+
+- **Página de Referência** : [link](https://www.doxygen.nl/download.html).
 
 ## 🛤️ Metodologia
 
@@ -44,15 +58,15 @@ O processo de trabalho é dividido em três fases fundamentais:
 
 ## 💼 Fluxo de Trabalho
 
-Foi fornecido um conjunto de documentos, listados na seção [Quadro Resumo](#quadro-resumo). No entanto, esses materiais abordam diversos temas além daqueles especificamente previstos em cada curso. Além dos documentos, também teremos as gravações das aulas síncronas, que poderão ou não possuir arquivos de transcrição associados. Assim, será necessária uma etapa de transcrição (vide [_software_](docs/_methodology_/1_separation/README.md)) para tornar esse conteúdo textual disponível para as etapas subsequentes.
+Foi fornecido um conjunto de documentos, listados na seção [Quadro Resumo](#quadro-resumo). No entanto, esses materiais abordam outros temas além daqueles especificamente previstos em cada aula. Além dos documentos, também teremos as gravações das aulas síncronas, que poderão ou não possuir arquivos de transcrição associados. Assim, será necessária uma etapa de transcrição (vide [_software_](docs/_methodology_/1_separation/README.md)) para tornar esse conteúdo textual disponível para as etapas subsequentes.
 
 O segundo momento será crucial para definir a qualidade dos resultados obtidos com o assistente de IA da plataforma [CourseBox](https://www.coursebox.ai/). A partir das transcrições, iremos construir um conjunto de **[Notas de Aula](docs/lecture-notes/README.md)** com o objetivo de [roteirizar o conteúdo](docs/_methodology_/2_treatment/README.md) abordado de forma precisa e estruturada. Esse processo de transformação poderá ser realizado com o auxílio de ferramentas de IA (ChatGPT, Gemini, Grok, entre outras). Em seguida, inicia-se uma etapa de revisão da estrutura proposta, acompanhada do desenvolvimento manual de conceitos, exemplos e demais elementos didáticos necessários.
 
-De posse das Notas de Aula já aperfeiçoadas, com os assuntos descritos de maneira mais aprofundada, o arquivo será adicionado à pasta [Notas de Aula](docs/lecture-notes/README.md) para fins de organização e controle. Em seguida, esse material será inserido na plataforma [CourseBox](https://www.coursebox.ai/). Nesse momento, serão realizados os procedimentos detalhados descritos na seção [CourseBox](3_operation/README.md).
+De posse das Notas de Aula já aperfeiçoadas, com os assuntos descritos de maneira mais aprofundada, o arquivo será adicionado à pasta [Notas de Aula](docs/lecture-notes/README.md) para fins de organização e controle. Em seguida, esse material será inserido na plataforma [CourseBox](https://www.coursebox.ai/). Nesse momento, serão realizados os procedimentos detalhados descritos na seção [Operação](3_operation/README.md).
 
 Após o processamento do curso pela plataforma [CourseBox](https://www.coursebox.ai/), a primeira fase se encerra com uma revisão manual dos cursos gerados.
 
-A segunda etapa passa a depender de um protagonismo maior do grupo de trabalho. Cada integrante deverá realizar os cursos produzidos, registrando possíveis equívocos, inconsistências ou alucinações da IA que eventualmente tenham passado despercebidos durante a rodada inicial de revisões individuais.
+A segunda etapa passa a depender de um protagonismo maior do grupo de trabalho. Cada integrante deverá realizar os cursos produzidos por colegas, registrando possíveis equívocos, inconsistências ou alucinações da IA que eventualmente tenham passado despercebidos durante a rodada inicial de revisões individuais.
 
 Esse retorno será realizado em formato de feedback (ver modelo em [feedback](docs/_methodology_/5_feedback/README.md)).
 
@@ -78,18 +92,3 @@ A última etapa da construção dos cursos consiste na definição manual de est
 | **11** | Oficina com Lideranças Regulatórias | 08/09 e 10/09 | 4h | Papel da mulher na regulação e tecnologia, estratégias de liderança, inovação com equidade e redes de apoio. |
 <!-- Não altere o "Quadro Resumo" -->
 
----
-
-## 🛠️ Instalação e Setup
-
-Este projeto utiliza o **[uv](https://docs.astral.sh/uv/)** como gerenciador de pacotes para garantir velocidade e reprodutibilidade.
-
-### 1. Instalando o `uv`
-No Windows (PowerShell):
-```powershell
-powershell -ExecutionPolicy ByPass -c "irm [https://astral.sh/uv/install.ps1](https://astral.sh/uv/install.ps1) | iex"
-```
-
-### 2. Doxygen (Opicional)
-
-- **Página de Referência** : [link](https://www.doxygen.nl/download.html).
