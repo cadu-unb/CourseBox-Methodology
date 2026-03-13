@@ -205,8 +205,8 @@ A última etapa da construção dos cursos consiste na definição manual de est
 <!-- Não altere o "Quadro Resumo" -->
 ## ✳️ Quadro Resumo
 
-| Módulo | Título do Conteúdo | Datas | Duração ****| Ementa |
-| :--- | :--- | :---: | :---: | :--- |
+| Módulo | Título do Conteúdo | Datas | Duração | Ementa |
+| :---: | :--- | :---: | :---: | :--- |
 | **01** | [Impactos do Ecossistema Digital na Comunicação Social](https://drive.google.com/file/d/1FifuaZBgfqAmyBgaVdEdfKn4oPvHhw60/view?usp=drive_link) | 19/05 e 21/05 | 4h | Mudanças estruturais na organização, produção e consumo de comunicação social (rádio, TV e imprensa). Estudo de caso do Grupo Globo. |
 | **02** | [Desenho regulatório responsivo](https://drive.google.com/file/d/1xJYEcPiN3cbVy2PaBFzTPyb62SDfv6T7/view?usp=sharing) | 26/05 e 28/05 | 4h | Conceitos fundamentais, fluxo regulatório, estágios da regulação responsiva, pirâmides responsivas e estudo de casos. |
 | **03** | [Modelo regulatório pró-inovação](https://drive.google.com/file/d/1wx74GRWU7S9MSOeo6K-2G1VunWnnEX81/view?usp=sharing) | 02/06 a 09/06 | 6h | Ciência, tecnologia e inovação no ecossistema digital. Sandbox regulatório e experimentação no setor público brasileiro. |
