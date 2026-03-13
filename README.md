@@ -11,7 +11,7 @@ Repositório estratégico para a construção, tratamento e organização de cur
   - [🛠️ Instalação e Setup](#️-instalação-e-setup)
     - [1. Instalando o `uv`](#1-instalando-o-uv)
     - [2. Doxygen (Opicional)](#2-doxygen-opicional)
-  - [Estrutura do projeto](#estrutura-do-projeto)
+  - [🏗️ Estrutura do projeto](#️-estrutura-do-projeto)
     - [0\_docs](#0_docs)
     - [1\_src](#1_src)
     - [2\_devtools](#2_devtools)
@@ -44,7 +44,7 @@ powershell -ExecutionPolicy ByPass -c "irm [https://astral.sh/uv/install.ps1](ht
 
 - **Página de Referência** : [link](https://www.doxygen.nl/download.html).
 
-## Estrutura do projeto
+## 🏗️ Estrutura do projeto
 
 A organização do repositório segue uma estrutura numérica para **facilitar navegação e leitura sequencial**, separando claramente:
 
