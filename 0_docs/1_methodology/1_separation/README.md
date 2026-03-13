@@ -1,12 +1,16 @@
-<!-- PATH: 0_docs/methodology/1_separation/README.md -->
-## Separação de informações de referência
+<!-- PATH: 0_docs/1_methodology/1_separation/README.md -->
+# Etapa 1 — Separation
 
-## Descrição
+## 📌 Objetivo
+Separar os materiais brutos em unidades analisáveis.
 
-Nesta pasta está estruturado o conjunto de códigos necessários para realizar a construção dos arquivo que serão anexados na ferramenta [CourseBox.ai](https://coursebox.ai) para construir os cursos do CPLP/ArcTel.
+## 🔧 Processos realizados
 
-## Tarefas
+## 📂 Entradas
+Tipo de material esperado.
 
-- Gravação do Módulo:
-  1. Tranformar vídeo em texto `video_texto.md`.
-  2. Tranformar `video_texto.md` em "Notas de Aula".
+## 📤 Saídas
+Artefatos produzidos.
+
+## 🔗 Relação com outras etapas
+Entrada para 2_treatment.
