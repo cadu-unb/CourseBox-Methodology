@@ -11,6 +11,11 @@ Repositório estratégico para a construção, tratamento e organização de cur
   - [🛠️ Instalação e Setup](#️-instalação-e-setup)
     - [1. Instalando o `uv`](#1-instalando-o-uv)
     - [2. Doxygen (Opicional)](#2-doxygen-opicional)
+  - [Estrutura do projeto](#estrutura-do-projeto)
+    - [0\_docs](#0_docs)
+    - [1\_src](#1_src)
+    - [2\_devtools](#2_devtools)
+    - [3\_data](#3_data)
   - [🛤️ Metodologia](#️-metodologia)
     - [Fase 1: Construção Individual](#fase-1-construção-individual)
     - [Fase 2: Reavaliação por Pares](#fase-2-reavaliação-por-pares)
@@ -38,6 +43,129 @@ powershell -ExecutionPolicy ByPass -c "irm [https://astral.sh/uv/install.ps1](ht
 ### 2. Doxygen (Opicional)
 
 - **Página de Referência** : [link](https://www.doxygen.nl/download.html).
+
+## Estrutura do projeto
+
+A organização do repositório segue uma estrutura numérica para **facilitar navegação e leitura sequencial**, separando claramente:
+
+* documentação
+* código fonte
+* ferramentas de desenvolvimento
+* dados utilizados no processamento
+
+```text
+CourseBox-Methodology/
+├── 0_docs
+├── 1_src
+├── 2_devtools
+└── 3_data
+```
+
+Cada diretório possui uma responsabilidade específica dentro do projeto.
+
+---
+
+### 0_docs
+
+Contém **toda a documentação conceitual, metodológica e técnica** do projeto.
+
+Esta pasta reúne materiais necessários para compreender a **metodologia pedagógica**, o **planejamento do curso** e a **documentação técnica do código**.
+
+Estrutura principal:
+
+```text
+0_docs/
+├── 1_methodology
+├── 2_syllabus
+├── 3_api
+└── 4_guides
+```
+
+Subpastas:
+
+* **1_methodology**
+  Descreve a metodologia utilizada para transformar materiais educacionais em conteúdos estruturados.
+
+* **2_syllabus**
+  Contém os documentos de planejamento pedagógico do curso.
+
+* **3_api**
+  Documentação técnica do código gerada automaticamente com **Doxygen**.
+
+* **4_guides**
+  Guias técnicos do projeto, incluindo convenções de código e padrões de desenvolvimento.
+
+---
+
+### 1_src
+
+Contém **todo o código fonte do projeto**.
+
+O código está organizado dentro do pacote principal `arctel`, seguindo uma arquitetura que separa **modelos de domínio, serviços e pipelines de processamento**.
+
+Estrutura principal:
+
+```text
+1_src/
+└── arctel/
+    ├── models
+    ├── services
+    └── pipeline
+```
+
+Componentes principais:
+
+* **models**
+  Estruturas de dados utilizadas pelo sistema.
+
+* **services**
+  Implementação da lógica de negócio e processamento.
+
+* **pipeline**
+  Fluxos de processamento que orquestram serviços para executar tarefas completas, como conversão de vídeo em texto.
+
+---
+
+### 2_devtools
+
+Contém **ferramentas auxiliares utilizadas durante o desenvolvimento**.
+
+Esses scripts não fazem parte do sistema principal, mas auxiliam na manutenção do projeto, automação de tarefas e inspeção da estrutura do repositório.
+
+Exemplo:
+
+```text
+2_devtools/
+└── py/
+    └── file_tree.py
+```
+
+O script `file_tree.py` é utilizado para gerar automaticamente a **árvore de diretórios do projeto**.
+
+---
+
+### 3_data
+
+Armazena **dados utilizados nos pipelines do projeto**.
+
+A estrutura segue o padrão comum em projetos de ciência de dados e engenharia de dados, separando **dados brutos** de **dados processados**.
+
+```text
+3_data/
+├── 1_raw
+└── 2_processed
+```
+
+Subpastas:
+
+* **1_raw**
+  Contém os dados originais utilizados como entrada nos processos.
+  Esses dados devem permanecer **imutáveis**.
+
+* **2_processed**
+  Contém dados gerados a partir dos pipelines de processamento.
+
+Essa separação facilita **reprodutibilidade, rastreabilidade e organização dos dados** ao longo do ciclo de desenvolvimento.
 
 ## 🛤️ Metodologia
 
