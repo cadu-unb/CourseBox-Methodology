@@ -1,5 +1,5 @@
 # Nome do projeto
-PROJECT_NAME = "Meu Projeto Python"
+PROJECT_NAME = "CourseBox-Methodology"
 
 # Onde está o código
 INPUT = ../../1_src

@@ -1,4 +1,4 @@
-<!-- PATH: 0_docs/4_guides/README.md -->
+<!-- PATH: 0_docs/3_guides/README.md -->
 # Guias de Desenvolvimento
 
 ## 📌 Objetivo

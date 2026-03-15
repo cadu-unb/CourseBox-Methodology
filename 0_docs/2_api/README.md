@@ -1,4 +1,4 @@
-<!-- PATH: 0_docs/3_api/README.md -->
+<!-- PATH: 0_docs/2_api/README.md -->
 # Documentação da API
 
 ## 📌 Objetivo

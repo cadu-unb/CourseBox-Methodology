@@ -3,7 +3,7 @@
 ```DOS
 CourseBox-Methodology/
 ├── 0_docs
-│   ├── 1_methodology
+│   ├── 0_methodology
 │   │   ├── 1_separation
 │   │   │   └── README.md
 │   │   ├── 2_treatment
@@ -18,7 +18,7 @@ CourseBox-Methodology/
 │   │   │   └── README.md
 │   │   └── 7_personalize
 │   │       └── README.md
-│   ├── 2_syllabus
+│   ├── 1_syllabus
 │   │   ├── md
 │   │   │   ├── CURSO ARCTEL.md
 │   │   │   └── Plano de Ensino Geral.md
@@ -27,13 +27,13 @@ CourseBox-Methodology/
 │   │   │   └── Plano de Ensino Geral.docx
 │   │   ├── README.md
 │   │   └── RESUMO.md
-│   ├── 3_api
+│   ├── 2_api
 │   │   ├── doxygen
 │   │   │   ├── html
 │   │   │   ├── Doxyfile
 │   │   │   └── README.md
 │   │   └── README.md
-│   ├── 4_guides
+│   ├── 3_guides
 │   │   ├── conventions.md
 │   │   └── README.md
 │   └── README.md

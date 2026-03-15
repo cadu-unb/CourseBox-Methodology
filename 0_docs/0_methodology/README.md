@@ -1,4 +1,4 @@
-<!-- PATH: 0_docs/1_methodology/README.md -->
+<!-- PATH: 0_docs/0_methodology/README.md -->
 # Metodologia CourseBox
 
 ## 📌 Objetivo

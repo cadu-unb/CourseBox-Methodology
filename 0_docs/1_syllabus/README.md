@@ -1,4 +1,4 @@
-<!-- PATH: 0_docs/2_syllabus/README.md -->
+<!-- PATH: 0_docs/1_syllabus/README.md -->
 # Syllabus do Curso
 
 ## 📌 Objetivo
@@ -11,3 +11,6 @@ raw – documentos originais
 
 ## 📏 Regras
 Arquivos originais devem permanecer inalterados.
+
+## Resumo
+Leia [arquivo](RESUMO.md).

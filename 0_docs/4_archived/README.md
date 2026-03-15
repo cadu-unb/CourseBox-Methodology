@@ -1,4 +1,4 @@
-<!-- PATH: 0_docs/5_archived/README.md -->
+<!-- PATH: 0_docs/4_archived/README.md -->
 # Arquivo
 
 ## 📌 Objetivo

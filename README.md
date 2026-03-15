@@ -75,24 +75,24 @@ Estrutura principal:
 
 ```text
 0_docs/
-├── 1_methodology
-├── 2_syllabus
-├── 3_api
-└── 4_guides
+├── 0_methodology
+├── 1_syllabus
+├── 2_api
+└── 3_guides
 ```
 
 Subpastas:
 
-* **1_methodology**
+* **0_methodology**
   Descreve a metodologia utilizada para transformar materiais educacionais em conteúdos estruturados.
 
-* **2_syllabus**
+* **1_syllabus**
   Contém os documentos de planejamento pedagógico do curso.
 
-* **3_api**
+* **2_api**
   Documentação técnica do código gerada automaticamente com **Doxygen**.
 
-* **4_guides**
+* **3_guides**
   Guias técnicos do projeto, incluindo convenções de código e padrões de desenvolvimento.
 
 ---
@@ -172,23 +172,23 @@ Essa separação facilita **reprodutibilidade, rastreabilidade e organização d
 O processo de trabalho é dividido em três fases fundamentais:
 
 ### Fase 1: Construção Individual
-1.  **[Separação de Referências](0_docs/1_methodology/1_separation/README.md)**: Triagem de ementas e transcrição de aulas síncronas.
-2.  **[Tratamento](0_docs/1_methodology/2_treatment/README.md)**: Elaboração de roteiros e alimentação da base de dados.
-3.  **[Operação CourseBox](0_docs/1_methodology/3_operation/README.md)**: Configuração do assistente de IA na plataforma.
-4.  **[Revisão Técnica](0_docs/1_methodology/4_review/README.md)**: Auditoria inicial dos resultados gerados.
+1.  **[Separação de Referências](0_docs/0_methodology/1_separation/README.md)**: Triagem de ementas e transcrição de aulas síncronas.
+2.  **[Tratamento](0_docs/0_methodology/2_treatment/README.md)**: Elaboração de roteiros e alimentação da base de dados.
+3.  **[Operação CourseBox](0_docs/0_methodology/3_operation/README.md)**: Configuração do assistente de IA na plataforma.
+4.  **[Revisão Técnica](0_docs/0_methodology/4_review/README.md)**: Auditoria inicial dos resultados gerados.
 
 ### Fase 2: Reavaliação por Pares
-5.  **[Feedback Cruzado](0_docs/1_methodology/5_feedback/README.md)**: Validação do conteúdo por outros membros da equipe.
-6.  **[Melhoria Contínua](0_docs/1_methodology/6_improvement/README.md)**: Implementação de correções baseadas nos feedbacks.
+5.  **[Feedback Cruzado](0_docs/0_methodology/5_feedback/README.md)**: Validação do conteúdo por outros membros da equipe.
+6.  **[Melhoria Contínua](0_docs/0_methodology/6_improvement/README.md)**: Implementação de correções baseadas nos feedbacks.
 
 ### Fase 3: Refinamento Estético
-7.  **[Personalização](0_docs/1_methodology/7_customization/README.md)**: Aperfeiçoamento da apresentação e experiência do usuário (UX).
+7.  **[Personalização](0_docs/0_methodology/7_customization/README.md)**: Aperfeiçoamento da apresentação e experiência do usuário (UX).
 
 ## 💼 Fluxo de Trabalho
 
-Foi fornecido um conjunto de documentos, listados na seção [Quadro Resumo](#quadro-resumo). No entanto, esses materiais abordam outros temas além daqueles especificamente previstos em cada aula. Além dos documentos, também teremos as gravações das aulas síncronas, que poderão ou não possuir arquivos de transcrição associados. Assim, será necessária uma etapa de transcrição (vide [_software_](0_docs/1_methodology/1_separation/README.md)) para tornar esse conteúdo textual disponível para as etapas subsequentes.
+Foi fornecido um conjunto de documentos, listados na seção [Quadro Resumo](#quadro-resumo). No entanto, esses materiais abordam outros temas além daqueles especificamente previstos em cada aula. Além dos documentos, também teremos as gravações das aulas síncronas, que poderão ou não possuir arquivos de transcrição associados. Assim, será necessária uma etapa de transcrição (vide [_software_](0_docs/0_methodology/1_separation/README.md)) para tornar esse conteúdo textual disponível para as etapas subsequentes.
 
-O segundo momento será crucial para definir a qualidade dos resultados obtidos com o assistente de IA da plataforma [CourseBox](https://www.coursebox.ai/). A partir das transcrições, iremos construir um conjunto de **[Notas de Aula](data/processed/README.md)** com o objetivo de [roteirizar o conteúdo](0_docs/1_methodology/2_treatment/README.md) abordado de forma precisa e estruturada. Esse processo de transformação poderá ser realizado com o auxílio de ferramentas de IA (ChatGPT, Gemini, Grok, entre outras). Em seguida, inicia-se uma etapa de revisão da estrutura proposta, acompanhada do desenvolvimento manual de conceitos, exemplos e demais elementos didáticos necessários.
+O segundo momento será crucial para definir a qualidade dos resultados obtidos com o assistente de IA da plataforma [CourseBox](https://www.coursebox.ai/). A partir das transcrições, iremos construir um conjunto de **[Notas de Aula](data/processed/README.md)** com o objetivo de [roteirizar o conteúdo](0_docs/0_methodology/2_treatment/README.md) abordado de forma precisa e estruturada. Esse processo de transformação poderá ser realizado com o auxílio de ferramentas de IA (ChatGPT, Gemini, Grok, entre outras). Em seguida, inicia-se uma etapa de revisão da estrutura proposta, acompanhada do desenvolvimento manual de conceitos, exemplos e demais elementos didáticos necessários.
 
 De posse das Notas de Aula já aperfeiçoadas, com os assuntos descritos de maneira mais aprofundada, o arquivo será adicionado à pasta [Notas de Aula](data/processed/README.md) para fins de organização e controle. Em seguida, esse material será inserido na plataforma [CourseBox](https://www.coursebox.ai/). Nesse momento, serão realizados os procedimentos detalhados descritos na seção [Operação](3_operation/README.md).
 
@@ -196,11 +196,11 @@ Após o processamento do curso pela plataforma [CourseBox](https://www.coursebox
 
 A segunda etapa passa a depender de um protagonismo maior do grupo de trabalho. Cada integrante deverá realizar os cursos produzidos por colegas, registrando possíveis equívocos, inconsistências ou alucinações da IA que eventualmente tenham passado despercebidos durante a rodada inicial de revisões individuais.
 
-Esse retorno será realizado em formato de feedback (ver modelo em [feedback](0_docs/1_methodology/5_feedback/README.md)).
+Esse retorno será realizado em formato de feedback (ver modelo em [feedback](0_docs/0_methodology/5_feedback/README.md)).
 
 Na etapa seguinte, cada autor de curso realizará a apuração individual das observações recebidas, analisando e incorporando as particularidades identificadas pelos colegas. Com isso, conclui-se a segunda fase do processo.
 
-A última etapa da construção dos cursos consiste na definição manual de estrutura e design por parte dos membros responsáveis pelo design. O objetivo é realizar um refinamento estético dos cursos, aperfeiçoando sua apresentação visual e experiência de uso (vide [Personalizar](0_docs/1_methodology/7_personalize/README.md)).
+A última etapa da construção dos cursos consiste na definição manual de estrutura e design por parte dos membros responsáveis pelo design. O objetivo é realizar um refinamento estético dos cursos, aperfeiçoando sua apresentação visual e experiência de uso (vide [Personalizar](0_docs/0_methodology/7_personalize/README.md)).
 
 <!-- Não altere o "Quadro Resumo" -->
 ## ✳️ Quadro Resumo

@@ -1,4 +1,4 @@
-0_docs/2_syllabus/README.md
+0_docs/1_syllabus/README.md
 # Projeto ARCTEL - Capacitação em Regulação e Ecossistema Digital
 
 Este repositório contém a documentação oficial, planos de ensino e materiais de apoio do **Curso ARCTEL**. O programa é focado nos impactos do ecossistema digital, novos modelos regulatórios e tendências tecnológicas voltadas para o setor de comunicações e telecomunicações.
