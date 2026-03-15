@@ -1,4 +1,5 @@
 import os
+import sys
 from pathlib import Path
 
 # --- Conteúdos dos arquivos específicos ---
@@ -624,12 +625,13 @@ if __name__ == "__main__":
 ''',
     
 }
+# --- Funções de Apoio ---
 
 def create_file(file_path, content=""):
     """
-    @brief Writes content to a file, creating directories if needed.
-    @param file_path (Path) Destination path.
-    @param content (str) Text to write.
+    @brief Cria um arquivo e escreve o conteúdo fornecido.
+    @param file_path (Path) Caminho completo do arquivo.
+    @param content (str) Conteúdo em string.
     """
     file_path.parent.mkdir(parents=True, exist_ok=True)
     with open(file_path, "w", encoding="utf-8") as f:
@@ -637,117 +639,135 @@ def create_file(file_path, content=""):
 
 def create_readme(file_path, project_root):
     """
-    @brief Creates a README with a PATH header.
-    @param file_path (Path) Path to the README.md.
-    @param project_root (Path) Root of the project for relative calculation.
+    @brief Gera um arquivo README.md com a tag de comentário PATH no topo.
+    @param file_path (Path) Local do README.
+    @param project_root (Path) Raiz do projeto para cálculo do caminho relativo.
     """
     try:
-        rel_path = file_path.relative_to(project_root)
+        relative = file_path.relative_to(project_root)
     except ValueError:
-        rel_path = file_path.name
-    
+        relative = file_path.name
+        
     header = f"\\n\\n# {file_path.parent.name}\\n"
     create_file(file_path, header)
 
-def check_integrity(root_path):
+def audit_project(root_path):
     """
-    @brief Audits the project structure for empty folders and stub READMEs.
-    @param root_path (Path) The project root to scan.
-    @return (dict) A report containing gaps found.
+    @brief Verifica a integridade da estrutura do projeto.
+    @param root_path (Path) Caminho raiz do projeto.
+    @details Checa pastas vazias, READMEs genéricos e pacotes sem __init__.py.
     """
-    report = {"empty_dirs": [], "stub_readmes": [], "missing_inits": []}
+    print(f"\\n{'='*50}")
+    print(f"REPORT DE INTEGRIDADE: {root_path.name}")
+    print(f"{'='*50}")
     
+    empty_dirs = []
+    stub_readmes = []
+    missing_inits = []
+
     for path in root_path.rglob("*"):
-        # Ignora pastas de sistema/ambiente
+        # Ignora pastas ocultas e caches
         if any(part.startswith('.') or part == "__pycache__" for part in path.parts):
             continue
-            
+
         if path.is_dir():
-            # Verifica pastas vazias
+            # 1. Checa pastas vazias
             if not any(path.iterdir()):
-                report["empty_dirs"].append(str(path.relative_to(root_path)))
+                empty_dirs.append(path.relative_to(root_path))
             
-            # Verifica falta de __init__.py em pastas de código (1_src)
-            if "1_src" in path.parts and not (path / "__init__.py").exists():
-                if path.name not in ["1_src"]:
-                    report["missing_inits"].append(str(path.relative_to(root_path)))
-
-        elif path.name == "README.md":
-            # Verifica se o README só tem o header de PATH
-            with open(path, "r", encoding="utf-8") as f:
-                lines = [l for l in f.readlines() if l.strip()]
-                if len(lines) <= 2 and "PATH:" in lines[0]:
-                    report["stub_readmes"].append(str(path.relative_to(root_path)))
-                    
-    return report
-
-def run_scaffold():
-    """
-    @brief Main workflow for creating or auditing the project structure.
-    """
-    current_dir = Path.cwd()
-    
-    # Válvula de Segurança: Verifica se estamos dentro da pasta de devtools
-    if current_dir.parts[-2:] == ("2_devtools", "py"):
-        project_root = current_dir.parents[2]
-        print(f"--- MODO AUDITORIA ATIVADO ({project_root.name}) ---")
-        report = check_integrity(project_root)
+            # 2. Checa pacotes Python em src que não possuem __init__.py
+            if "1_src" in path.parts and path.name not in ["1_src"]:
+                if not (path / "__init__.py").exists():
+                    missing_inits.append(path.relative_to(root_path))
         
-        print(f"\\n[!] Pastas vazias found: {len(report['empty_dirs'])}")
-        for d in report["empty_dirs"]: print(f"  - {d}")
-            
-        print(f"\\n[!] READMEs ainda 'não documentados': {len(report['stub_readmes'])}")
-        for r in report["stub_readmes"]: print(f"  - {r}")
+        elif path.name == "README.md":
+            # 3. Checa READMEs que só possuem o header (vazios de conteúdo real)
+            with open(path, "r", encoding="utf-8") as f:
+                content = f.read().strip()
+                lines = content.split('\\n')
+                if len(lines) <= 3 and "PATH:" in lines[0]:
+                    stub_readmes.append(path.relative_to(root_path))
 
-        print(f"\\n[!] Pacotes Python sem __init__.py: {len(report['missing_inits'])}")
-        for i in report["missing_inits"]: print(f"  - {i}")
+    # Impressão do Relatório
+    sections = [
+        ("Pastas Vazias", empty_dirs),
+        ("READMEs por preencher", stub_readmes),
+        ("Pacotes sem __init__.py", missing_inits)
+    ]
+
+    for title, items in sections:
+        print(f"\\n[!] {title}: {len(items)}")
+        for item in items:
+            print(f"    └── {item}")
+
+    if not any([empty_dirs, stub_readmes, missing_inits]):
+        print("\\n[V] Estrutura íntegra! Nada a reportar.")
+    print(f"\\n{'='*50}")
+
+def run():
+    """
+    @brief Workflow principal: decide entre criar projeto ou auditar baseado na localização do script.
+    """
+    # Resolve o caminho absoluto de ONDE este arquivo scaffold.py está fisicamente
+    script_path = Path(__file__).resolve()
+    
+    # Se o script está em .../2_devtools/py/scaffold.py
+    if script_path.parts[-3:-1] == ("2_devtools", "py"):
+        project_root = script_path.parents[2]
+        audit_project(project_root)
         return
 
     # Modo Criação
-    p_name = input("Nome do Projeto: ").strip() or "meu_projeto"
-    p_obj = input("Objetivo (pasta src): ").strip() or "core"
-    root = Path(p_name)
+    nome_proj = input("Nome do Projeto: ").strip() or "novo_projeto"
+    obj_proj = input("Objetivo do Projeto (pasta em src): ").strip() or "app"
+    root = Path(nome_proj).resolve()
 
-    # Definição expandida
+    # Estrutura base
     structure = [
         root / "0_docs/1_syllabus/md",
         root / "0_docs/2_api/doxygen",
         root / "0_docs/3_guides",
-        root / "0_docs/4_archived",
-        root / "0_docs/5_assets",
-        root / f"1_src/{p_obj}/models",
-        root / f"1_src/{p_obj}/pipeline",
-        root / f"1_src/{p_obj}/services",
+        root / f"1_src/{obj_proj}/models",
+        root / f"1_src/{obj_proj}/pipeline",
+        root / f"1_src/{obj_proj}/services",
         root / "2_devtools/py",
-        root / "3_data/0_external",
         root / "3_data/1_raw",
         root / "3_data/2_processed",
-        root / "4_tests"
     ]
+
+    print(f"[*] Gerando andaime em: {root}")
 
     for folder in structure:
         folder.mkdir(parents=True, exist_ok=True)
         create_readme(folder / "README.md", root)
 
-    # Arquivos raiz
+    # READMEs das raízes
+    for parent_folder in ["0_docs", "1_src", "2_devtools", "3_data"]:
+        create_readme(root / parent_folder / "README.md", root)
     create_readme(root / "README.md", root)
-    create_file(root / ".gitignore", "__pycache__/\\n.env\\n.vscode/")
-    create_file(root / ".env.example", "API_KEY=your_key_here")
 
-    # Inits e Main
-    for p in root.rglob("*/"):
-        if "1_src" in p.parts and p.name not in ["1_src", p_obj]:
+    # Arquivos de Suporte
+    create_file(root / ".gitignore", "__pycache__/\\n.env\\n*.pyc\\n.vscode/")
+    create_file(root / "0_docs/2_api/doxygen/Doxyfile", CONTENT_DOXYFILE.format(project_name=nome_proj))
+    create_file(root / "0_docs/3_guides/conventions.md", CONTENT_CONVENTIONS)
+    create_file(root / f"1_src/{obj_proj}/pipeline/main.py", "# Entry point\\n")
+
+    # __init__.py em pastas de código
+    for p in root.rglob("*"):
+        if p.is_dir() and "1_src" in p.parts and p.name not in ["1_src", obj_proj]:
             create_file(p / "__init__.py", "")
+    create_file(root / "2_devtools/py/__init__.py", "")
 
-    # Inserindo ferramentas do DevTools
+    # Inserindo dicionário de ferramentas
     for filename, content in CONTENT_DEVTOOLS.items():
         create_file(root / "2_devtools/py" / filename, content)
 
-    # Auto-replicação do scaffold
-    with open(__file__, "r", encoding="utf-8") as f:
+    # Auto-replicação (O script se move para o novo lar)
+    with open(script_path, "r", encoding="utf-8") as f:
         create_file(root / "2_devtools/py/scaffold.py", f.read())
 
-    print(f"\\n[V] Estrutura '{p_name}' criada. Ferramenta movida para 2_devtools/py/scaffold.py")
+    print(f"[V] Sucesso! Projeto '{nome_proj}' pronto.")
+    print(f"[i] Para auditar futuramente, execute o script dentro de: {root / '2_devtools' / 'py'}")
 
 if __name__ == "__main__":
-    run_scaffold()
+    run()
