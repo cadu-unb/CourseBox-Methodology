@@ -1,6 +1,9 @@
 <!-- PATH: RAIZ DO PROJETO -->
 # CourseBox
 
+https://paletadecolores.online/pt/amarelo/mostarda/
+https://emojidb.org/alerta-emojis?utm_source=user_search
+
 Repositório estratégico para a construção, tratamento e organização de cursos na plataforma [CourseBox](https://coursebox.ai).
 
 ## 📌 Índice
@@ -8,9 +11,10 @@ Repositório estratégico para a construção, tratamento e organização de cur
 - [CourseBox](#coursebox)
   - [📌 Índice](#-índice)
   - [🎯 Objetivo](#-objetivo)
-  - [🛠️ Instalação e Setup](#️-instalação-e-setup)
+  - [🛠️ Instalação](#️-instalação)
     - [1. Instalando o `uv`](#1-instalando-o-uv)
     - [2. Doxygen (Opicional)](#2-doxygen-opicional)
+  - [🚀 Setup](#-setup)
   - [🏗️ Estrutura do projeto](#️-estrutura-do-projeto)
     - [📁 0\_docs](#-0_docs)
     - [📁 1\_src](#-1_src)
@@ -30,7 +34,7 @@ Este repositório centraliza os procedimentos técnicos e pedagógicos para a cr
 1.  **Curso ARCTEL "Empoderamento de Lideranças Femininas"**: Construção de material suplementar e substitutivo para as aulas síncronas (período de 19/05/2026 a 10/09/2026).
 2.  **IAClube**: Desenvolvimento de cursos sobre Ferramentas de IA para o portal [iaclube.help](https://iaclube.help) e projetos vinculados a editais da FAPDF.
 
-## 🛠️ Instalação e Setup
+## 🛠️ Instalação
 
 Este projeto utiliza o **[uv](https://docs.astral.sh/uv/)** como gerenciador de pacotes para garantir velocidade e reprodutibilidade.
 
@@ -43,6 +47,14 @@ powershell -ExecutionPolicy ByPass -c "irm [https://astral.sh/uv/install.ps1](ht
 ### 2. Doxygen (Opicional)
 
 - **Página de Referência** : [link](https://www.doxygen.nl/download.html).
+
+## 🚀 Setup
+
+No terminal do VSCODE dentro do projeto
+
+```terminal
+uv run
+```
 
 ## 🏗️ Estrutura do projeto
 
