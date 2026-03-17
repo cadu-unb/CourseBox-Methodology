@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
-"""
+"""!
 @file text_extractor.py
 @brief Pipeline robusto para extração de texto de PDFs digitais e digitalizados.
 
@@ -40,13 +40,13 @@ MIN_CHARS_THRESHOLD = 30
 
 
 class PDFTextExtractor:
-    """
+    """!
     @class PDFTextExtractor
     @brief Classe responsável pela extração híbrida de texto em PDFs.
     """
 
     def __init__(self, pdf_path: str) -> None:
-        """
+        """!
         @brief Inicializa o extrator.
 
         @param pdf_path Caminho para o arquivo PDF.
@@ -67,7 +67,7 @@ class PDFTextExtractor:
 
     @staticmethod
     def parse_page_selection(selection: str) -> List[int]:
-        """
+        """!
         @brief Converte string de seleção de páginas em lista de índices.
 
         Exemplo:
@@ -94,7 +94,7 @@ class PDFTextExtractor:
 
     @staticmethod
     def _validate_text_density(text: str) -> bool:
-        """
+        """!
         @brief Verifica se a extração nativa retornou texto suficiente.
 
         @param text Texto extraído.
@@ -107,7 +107,7 @@ class PDFTextExtractor:
 
     @staticmethod
     def _extract_structured_text(page: fitz.Page) -> str:
-        """
+        """!
         @brief Extrai texto preservando layout lógico.
 
         Utiliza blocos de texto para evitar mistura de colunas
@@ -132,7 +132,7 @@ class PDFTextExtractor:
 
     @staticmethod
     def _perform_ocr(page: fitz.Page) -> str:
-        """
+        """!
         @brief Executa OCR em uma página do PDF.
 
         @param page Página do PDF.
@@ -148,7 +148,7 @@ class PDFTextExtractor:
         return text
 
     def extract_pages(self, pages: Optional[List[int]] = None) -> str:
-        """
+        """!
         @brief Executa extração de texto nas páginas especificadas.
 
         @param pages Lista de páginas (base 1). Se None, processa todas.
@@ -183,7 +183,7 @@ class PDFTextExtractor:
         return "\n".join(extracted_text)
 
     def save_to_txt(self, text: str, output_path: str) -> None:
-        """
+        """!
         @brief Salva texto consolidado em arquivo UTF-8.
 
         @param text Texto a ser salvo.
@@ -199,7 +199,7 @@ def extract_pdf_text(
     output_txt: str,
     page_selection: Optional[str] = None
 ) -> None:
-    """
+    """!
     @brief Função utilitária de alto nível para extração completa.
 
     @param pdf_path Caminho do PDF.
