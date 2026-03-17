@@ -1,0 +1,36 @@
+# Nome do projeto
+PROJECT_NAME = "CourseBox-Methodology"
+
+# Caminho de entrada
+INPUT = arctel
+
+# 🔥 ESSENCIAL: buscar recursivamente
+RECURSIVE = YES
+
+# Padrões de arquivos
+FILE_PATTERNS = *.py
+
+# Mapeamento para Python
+EXTENSION_MAPPING = py=Python
+
+# Extração completa
+EXTRACT_ALL = YES
+EXTRACT_PRIVATE = YES
+EXTRACT_STATIC = YES
+
+# Melhor suporte a Python
+OPTIMIZE_OUTPUT_FOR_C = NO
+OPTIMIZE_OUTPUT_JAVA = NO
+
+# Docstrings
+JAVADOC_AUTOBRIEF = YES
+MULTILINE_CPP_IS_BRIEF = YES
+
+# Saída
+OUTPUT_DIRECTORY = .
+GENERATE_HTML = YES
+GENERATE_LATEX = NO
+
+# Logs úteis (DEBUG)
+QUIET = NO
+WARNINGS = YES

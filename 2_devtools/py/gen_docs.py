@@ -9,7 +9,7 @@ def generate_docs() -> None:
     """
     script_path  = Path(__file__).resolve()
     project_root = script_path.parents[2]
-    doxyfile     = project_root / "0_docs" / "2_api" / "doxygen" / "Doxyfile"
+    doxyfile     = project_root / "1_src" / "Doxyfile"
     workdir      = doxyfile.parent
 
     if not doxyfile.exists():
