@@ -13,7 +13,7 @@ Repositório estratégico para a construção, tratamento e organização de cur
   - [🎯 Objetivo](#-objetivo)
   - [🛠️ Instalação](#️-instalação)
     - [1. Instalando o `uv`](#1-instalando-o-uv)
-    - [2. Doxygen (Opicional)](#2-doxygen-opicional)
+    - [2. Doxygen (Opcional)](#2-doxygen-opcional)
   - [🚀 Setup](#-setup)
   - [🏗️ Estrutura do projeto](#️-estrutura-do-projeto)
     - [📁 0\_docs](#-0_docs)
@@ -44,13 +44,13 @@ No Windows (PowerShell):
 powershell -ExecutionPolicy ByPass -c "irm [https://astral.sh/uv/install.ps1](https://astral.sh/uv/install.ps1) | iex"
 ```
 
-### 2. Doxygen (Opicional)
+### 2. Doxygen (Opcional)
 
 - **Página de Referência** : [link](https://www.doxygen.nl/download.html).
 
 ## 🚀 Setup
 
-No terminal do VSCODE dentro do projeto
+No terminal do VSCODE dentro do projeto:
 
 ```terminal
 uv run
@@ -58,7 +58,7 @@ uv run
 
 ## 🏗️ Estrutura do projeto
 
-A organização do repositório segue uma estrutura numérica para **facilitar navegação e leitura sequencial**, separando claramente:
+A organização do repositório segue uma estrutura numérica para **facilitar navegação e leitura sequencial** das pastas, separando claramente:
 
 * documentação
 * código fonte
@@ -187,7 +187,7 @@ O processo de trabalho é dividido em três fases fundamentais:
 1.  **[Separação de Referências](0_docs/0_methodology/1_separation.md)**: Triagem de ementas e transcrição de aulas síncronas.
 2.  **[Tratamento](0_docs/0_methodology/2_treatment.md)**: Elaboração de roteiros e alimentação da base de dados.
 3.  **[Operação CourseBox](0_docs/0_methodology/3_operation.md)**: Configuração do assistente de IA na plataforma.
-4.  **[Revisão Técnica](0_docs/0_methodology/4_review.md)**: Auditoria inicial dos resultados gerados pelo próprio operador.
+4.  **[Revisão Técnica](0_docs/0_methodology/4_review.md)**: Auditoria inicial dos resultados gerados pelo próprio operador. Deixar os capítulos desbloqueados.
 
 ### Fase 2: Reavaliação por Pares
 5.  **[Feedback Cruzado](0_docs/0_methodology/5_feedback.md)**: Validação do conteúdo por outros membros da equipe.
