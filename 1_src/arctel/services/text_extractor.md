@@ -1,4 +1,4 @@
-<!-- PATH: 1_src/services/README.md -->
+<!-- PATH: 1_src/services/text_extractor.md -->
 
 # 📄 PDF Text Extractor
 
