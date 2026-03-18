@@ -1,196 +1,343 @@
 <!-- PATH: 0_docs/0_methodology/3_operation.md -->
 
-# Plataforma Coursebox.ai
+# ⚙️ Etapa 3 — Operação na Plataforma (Coursebox.ai)
 
-Neste capítulo vamos sumarizar objetivamente os principais campos da ferramenta.
+# 🎯 Visão Geral
 
-## 📌 Índice
-- [Plataforma Coursebox.ai](#plataforma-courseboxai)
-  - [📌 Índice](#-índice)
-  - [Acesso](#acesso)
-    - [Navegação pela ferramenta](#navegação-pela-ferramenta)
-  - [Mãos a obra](#mãos-a-obra)
-    - [Conta](#conta)
-    - [Home Page](#home-page)
-    - [Prompt do Curso](#prompt-do-curso)
-      - [Carregar](#carregar)
-      - [Audiência](#audiência)
-      - [Estrutura](#estrutura)
-      - [Configurações](#configurações)
-      - [O Prompt Geral](#o-prompt-geral)
-      - [Atenção](#atenção)
-    - [Revisão Pré Processamento](#revisão-pré-processamento)
-  - [Encerramento](#encerramento)
-  - [Próxima etapa](#próxima-etapa)
+Nesta etapa, você irá transformar as **Notas de Aula estruturadas** (geradas na Etapa 2) em um **curso completo dentro da plataforma Coursebox.ai**.
 
-## Acesso
+O foco aqui é operacional: configurar corretamente os inputs para garantir que a IA gere um curso **coerente, didático e alinhado ao objetivo pedagógico**.
 
-O acesso acontecerá diretamente pela [Coursebox.ai](https://www.coursebox.ai/pt). Em nosso caso será necessário utilizar uma conta compartilhada entre os componentes da equipe. Para isso ocorre de maneira sustetável e com o menor estresse para as partes o professor responsável irá delegar o acesso à uma conta gmail, dessa maneria caso seja necessário inserir qualquer código de validação em duas etapas o operador terá total autonomia.
+> 🚨 **Princípio-chave**
+>
+> A qualidade do curso gerado depende diretamente da qualidade e da configuração dos insumos.
+> *(Garbage In, Garbage Out)*
 
-### Navegação pela ferramenta
+# 📌 Índice
 
-Durante o mês de fevereiro realizamos uma breve apresentação com um exercício demonstrativo conjunto com os operadores e também lhes foi solicitado que se cadastrassem para realizar testes e atividade exploratórias. 
+- [⚙️ Etapa 3 — Operação na Plataforma (Coursebox.ai)](#️-etapa-3--operação-na-plataforma-courseboxai)
+- [🎯 Visão Geral](#-visão-geral)
+- [📌 Índice](#-índice)
+- [🔐 Acesso](#-acesso)
+  - [🧭 Navegação Geral](#-navegação-geral)
+- [🚀 Execução do Processo](#-execução-do-processo)
+  - [🔑 Login](#-login)
+  - [➕ Criar Novo Curso](#-criar-novo-curso)
+- [⚙️ Configuração do Curso](#️-configuração-do-curso)
+  - [📂 Carregar Conteúdo](#-carregar-conteúdo)
+    - [✔ O que enviar](#-o-que-enviar)
+    - [🧠 Configuração essencial](#-configuração-essencial)
+  - [🎯 Audiência](#-audiência)
+    - [✔ Exemplos](#-exemplos)
+  - [🧩 Estrutura](#-estrutura)
+    - [✔ Verificação obrigatória](#-verificação-obrigatória)
+    - [⚙️ Parâmetros Fixos](#️-parâmetros-fixos)
+    - [📌 Ajuste específico (PLIA-DF)](#-ajuste-específico-plia-df)
+  - [⚙️ Configurações](#️-configurações)
+    - [✔ Ação](#-ação)
+  - [🧠 Prompt Geral](#-prompt-geral)
+    - [✔ Objetivo](#-objetivo)
+    - [📌 Estratégia](#-estratégia)
+    - [⏱️ Definição de duração](#️-definição-de-duração)
+    - [🧾 Modelo de Prompt](#-modelo-de-prompt)
+  - [👁️ Revisão Pré-Processamento](#️-revisão-pré-processamento)
+    - [✔ O que validar](#-o-que-validar)
+    - [✔ Ação do operador](#-ação-do-operador)
+- [✅ Encerramento](#-encerramento)
+- [🔄 Resultado da Etapa](#-resultado-da-etapa)
+- [⏭️ Próxima Etapa](#️-próxima-etapa)
 
-## Mãos a obra
+# 🔐 Acesso
 
-### Conta
+Acesse a plataforma:
+
+👉 https://www.coursebox.ai/pt
+
+O acesso será realizado via **conta compartilhada da equipe**.
+
+> ⚠️ **Atenção**
+>
+> Utilize exclusivamente a conta designada.
+> Isso garante rastreabilidade e evita bloqueios por autenticação em dois fatores.
+
+## 🧭 Navegação Geral
+
+A interface apresenta:
+
+* Lista de cursos existentes
+* Opções de configuração
+* Botão de criação de novos cursos
+
+# 🚀 Execução do Processo
+
+## 🔑 Login
 
 <!-- Ilustração - print da tela -->
-![Print tela de longin](images/3-00_login.png)
+![Print tela de login](images/3-00_login.png)
 
-Login: @gmail.com
-Senha: **********
+Insira:
 
-### Home Page
+* **Login:** (conta institucional)
+* **Senha:** (fornecida pela coordenação)
+
+## ➕ Criar Novo Curso
 
 <!-- Ilustração - print da tela -->
 ![Print home page](images/3-0_veryBegin.png)
 
-Ao realizar o login vamos nos deparar com uma tela com os cursos que já foram construídos, configurações e outras elementos. Vamos clicar no botão com o "**+**" escrito **"Criar Curso"**, circulado em vermelho na imagem abaixo.
+Na página inicial:
+
+1. Localize o botão **"Criar Curso"** (ícone **+**)
+2. Clique para iniciar
 
 <!-- Ilustração - print da tela -->
 ![Print home page](images/3-0_veryBegin_enfase.png)
 
-### Prompt do Curso
+# ⚙️ Configuração do Curso
+
+Após clicar em **"Criar Curso"**, você verá a tela principal de configuração:
 
 <!-- Ilustração - print da tela -->
-![Print gearar seu curso](images/3-1_inicio.png)
+![Print gerar curso](images/3-1_inicio.png)
 
-Após ter cliclado no botão **"Criar Curso"** somos redirecionados para a página acima, nela temos uma série de elementos que vamos definir na subssessões que seguem.
+> 📌 **Ordem recomendada de preenchimento**
+>
+> 1. **Carregar**
+> 2. **Audiência**
+> 3. **Estrutura**
+> 4. **Configurações**
+> 5. **Prompt Geral**
 
-> OBS.: vamos primeiro preencher os campos **Carregar**, **Audiência**, **Estrutura** e **Configurações**. Em seguida daremos atenção
-
-#### Carregar
-
-<!-- Ilustração - print da tela -->
-![Print gearar seu curso](images/3-1_inicio_enf_1.png)
-
-Essa etapa é a parte mais importante para a qualidade do conteúdo que será gerado pela plataforma [Coursebox.ai](https://www.coursebox.ai/pt), porque é onde vamos definir as fontes de consulta.
-
-Ao clicar nesse botão teremos a interface abaixo apresentada:
+## 📂 Carregar Conteúdo
 
 <!-- Ilustração - print da tela -->
-![Print gearar seu curso](images/3-2_carregarArquivos.png)
+![Print carregar](images/3-1_inicio_enf_1.png)
 
-No segundo passo [link](2_treatment.md) construímos as notas de aula em formato `.md`, vamos criar uma cópia desse arquivo e vamos mudar alterar sua extessão para `.txt` assim tornando a informação mais fácil de "digerir" para a _LLM_ (Large Laguage Model) da plataforma. 
+Esta é a etapa **mais crítica**.
 
-No primeiro passo [link](1_separation.md) separamos tanto o trecho do documento de referência quanto a audio transcrição da aula. No entanto, vamos anexar apenas a parte escolhida do professor do documento de referência. 
+Clique em **"Carregar"**:
 
-As notas de aula tomam um papel fundamental na lógica de construção, servindo de **estrutura do curso**, então verifique se esse arquivo está com a seguinte marcação:
+<!-- Ilustração - print da tela -->
+![Upload arquivos](images/3-2_carregarArquivos.png)
+
+### ✔ O que enviar
+
+1. **Notas de Aula (obrigatório)**
+
+   * Arquivo: `aula_01_notas_v1.md`
+   * Criar cópia em `.txt` antes do upload
+
+2. **Documento de referência (opcional e seletivo)**
+
+   * Apenas trechos relevantes definidos na Etapa 1
+
+> ⚠️ **Atenção Crítica**
+>
+> Não envie documentos completos sem triagem.
+> Isso degrada significativamente a qualidade do curso gerado.
+
+### 🧠 Configuração essencial
+
+Após upload, marque:
+
+**"Usar como Estrutura do curso"** no arquivo de Notas de Aula
 
 <div align="center">
-  <img src="images/3-4_botao_UsarComoEstruturaDoCurso.png" width="500px" height="auto" alt="Print do botão">
+  <img src="images/3-4_botao_UsarComoEstruturaDoCurso.png" width="500px" />
 </div>
 
-Alternativamente, se alguma das referência disponbilizar algum site também podemos associa-lo.
-
-#### Audiência
+## 🎯 Audiência
 
 <!-- Ilustração - print da tela -->
-![Print gearar seu curso](images/3-1_inicio_enf_2.png)
+![Print audiência](images/3-1_inicio_enf_2.png)
 
-Ao clicar nesse botão teremos a interface abaixo apresentada:
+Clique em **"Audiência"**:
 
 <!-- Ilustração - print da tela -->
-![Print gearar seu curso](images/3-3_audiencia.png)
+![Tela audiência](images/3-3_audiencia.png)
 
-Basicamente um prompt onde vamos informar o público alvo para a atividade. Note que, ao longo da nossa jornada teremos dois públicos-alvo completamente diferentes:
+Defina claramente o público-alvo.
 
-1. "Curso da ARCTEL: Empoderamento de Lideranças Femininas em setores regulação e regulamentação" de Telecomunições e afins; São todos paises de lingua portuguesa que vão participar.
+### ✔ Exemplos
 
-2. "PLIA-DF: Plataforma de Letramento em Inteligência Artificial para
-Docente DF"; São professores de todas as áreas do ensino que atuem no Ensino Médio.
+**ARCTEL — Lideranças Femininas**
 
-Por essa razão precisamos de dois prompts diferentes para descrever os diferentes públicos-alvo:
-
-- Lideranças Femininas do curso ARCTEL
 ```text
-<!-- Cria uma descrição simples e direta do publico alvo -->
+Profissionais do setor de telecomunicações e regulação, oriundas de países lusófonos, com interesse em desenvolvimento de liderança e tomada de decisão estratégica.
 ```
 
-- Professores da Secretária de Educação do Distrito Federal (SEDF)
+**PLIA-DF — Professores**
+
 ```text
-<!-- Cria uma descrição simples e direta do publico alvo -->
+Docentes do Ensino Médio da rede pública do Distrito Federal, de diferentes áreas, com interesse em aplicar conceitos de Inteligência Artificial na prática pedagógica.
 ```
 
-#### Estrutura
+> 📌 **Nota**
+>
+> Quanto mais claro o público, melhor a adaptação do conteúdo pela IA.
 
-Retornando a tela anterior, temos:
-
-<!-- Ilustração - print da tela -->
-![Print gearar seu curso](images/3-1_inicio_enf_3.png)
-
-Ao clicar nesse botão teremos a interface abaixo apresentada:
+## 🧩 Estrutura
 
 <!-- Ilustração - print da tela -->
-![Print gearar seu curso](images/3-5_redundancia_estrutura.png)
+![Print estrutura](images/3-1_inicio_enf_3.png)
 
-Que é uma tela um tanto quanto redundânte quando comparamos com a [Carregar](#carregar) que vimos antes, nela vamos apenas garantir que o documento notas de aula esteja marcado como **"Usar como Estrutura do curso"**. Dessa tela vamos clicar em "Parâmetros Fixos", como podemos ver abaixo:
+Clique em **"Estrutura"**:
+
+<!-- Ilustração - print da tela -->
+![Tela estrutura](images/3-5_redundancia_estrutura.png)
+
+### ✔ Verificação obrigatória
+
+* Confirme que o arquivo de Notas de Aula está marcado como:
+  **"Usar como Estrutura do curso"**
+
+### ⚙️ Parâmetros Fixos
+
+Clique em **"Parâmetros Fixos"**:
 
 <div align="center">
-  <img src="images/3-5_redundancia_estrutura_2.png" width="750px" height="auto" alt="Print do botão">
+  <img src="images/3-5_redundancia_estrutura_2.png" width="750px" />
 </div>
 
-Na nova tela vamos comparar com os parâmetros da print abaixo, exceto que utilizamos o valor de **Seções** igual à 5.
+Configure:
 
-> Se estivermos construindo cursos do PLIA-DF, sobre ferramentas de IA, vamos marcar em **"Tarefas por Seção"** como valor  de **3**;
+* **Seções:** 5
+
+### 📌 Ajuste específico (PLIA-DF)
+
+* **Tarefas por Seção:** 3
 
 <div align="center">
-  <img src="images/3-5_redundancia_estrutura_3.png" width="750px" height="auto" alt="Print do botão">
+  <img src="images/3-5_redundancia_estrutura_3.png" width="750px" />
 </div>
 
-#### Configurações
-
-Retornando a tela anterior, temos:
+## ⚙️ Configurações
 
 <!-- Ilustração - print da tela -->
-![Print gearar seu curso](images/3-1_inicio_enf_4.png)
+![Print configurações](images/3-1_inicio_enf_4.png)
 
-Clique nesse botão, este procedimento será o mais simples e rápido, na nova tela vamos apenas comparar com os parâmetros da print abaixo:
-
-<!-- Ilustração - print da tela -->
-![Print gearar seu curso](images/3-6_configuracoes.png)
-
-#### O Prompt Geral
+Clique em **"Configurações"**:
 
 <!-- Ilustração - print da tela -->
-![Print gearar seu curso](images/3-1_inicio.png)
 
-Enquanto fomos adicionando as configurações e anexando documentos é certo que a caixa do prompt inicial foi preenchida automáticamente, no entanto vamos tomar um pouco mais de cuidado na construção desse prompt.
+<div align="center">
+ <img src="images/3-6_configuracoes.png" width="750px" />
+</div
 
-Ao utilizar o arquivo `aula_01_notas_v1.md` da primeira geração (e provavelmente a mais curta) vamos criar um texto resumo com os tópicos esperados e definições fundamentais, depois a duração aproximada de 1h30 à 2h30, para o curso da ARCTEL ou 2h à 4h para o PLIA-DF.
+### ✔ Ação
 
-Formato de Prompt
+Compare os parâmetros com a imagem e replique exatamente.
+
+> ⚠️ **Atenção**
+>
+> Pequenas diferenças aqui podem alterar significativamente o comportamento da geração.
+
+## 🧠 Prompt Geral
+
+Retorne à tela principal:
+
+<!-- Ilustração - print da tela -->
+![Print gerar curso](images/3-1_inicio.png)
+
+### ✔ Objetivo
+
+Refinar o prompt automático gerado pela plataforma.
+
+### 📌 Estratégia
+
+Utilize o conteúdo de:
+
+`aula_01_notas_v1.md`
+
+Para construir:
+
+* Resumo estruturado
+* Tópicos principais
+* Definições essenciais
+
+### ⏱️ Definição de duração
+
+* **ARCTEL:** 1h30 – 2h30
+* **PLIA-DF:** 2h – 4h
+
+### 🧾 Modelo de Prompt
+
 ```text
 # Contexto
-Este curso fará parte da trilha de aprendizado {do módulo ou ferramenta} do {ARCTEL ou PLIA-DF}.
+Este curso faz parte da trilha {módulo/ferramenta} do programa {ARCTEL ou PLIA-DF}.
 
 # Duração
-{Lógia de duração informada}
+{Definir conforme padrão}
 
-# Púlico Alvo
-{Lógia de duração informada}
+# Público-Alvo
+{Inserir descrição definida anteriormente}
 
-# Conteúdo Esperados no Curso
-<!-- Aqui o operador terá que preencher -->
+# Conteúdos Esperados
+{Listar tópicos principais das Notas de Aula}
 
-# Retorno
-Curso com linguagem formal direta, sem rebuscamento desnecessário. Imagens coloridas, criativas e divertidas, mas sem infantilizar o assunto ou a forma. Tarefaz crítica e formadoras de conhecimento. Quizes abordando definições fundamentais, sem pegadadinhas.
+# Diretrizes de Geração
+- Linguagem formal e direta
+- Evitar rebuscamento
+- Inserir exemplos práticos
+- Criar atividades formativas
+- Incluir quizzes focados em conceitos fundamentais
+- Utilizar imagens criativas sem infantilização
 ```
 
-#### Atenção
+> 📌 **Nota**
+>
+> O prompt é o principal mecanismo de controle fino da geração.
 
-Antes de clicar em **Gerar** verifique se o switch (barra de deslizar) **"Visualizar estrutura"** está ativado. Vide imagem abaixo:
+## 👁️ Revisão Pré-Processamento
+
+Antes de gerar o curso:
+
+Ative o switch:
+
+**"Visualizar estrutura"**
 
 <!-- Ilustração - print da tela -->
-![Print gearar seu curso](images/3-1_inicio_enf_5.png)
+![Print visualizar estrutura](images/3-1_inicio_enf_5.png)
 
-### Revisão Pré Processamento
+### ✔ O que validar
 
-Ao deixar a opção de **"Visualizar estrutura"** ativada a plataforma produz uma sugestão de estrutura para o curso. Em tópicos simples a plataforma apresenta os capítulos que vão compor o curso, os títulos de cada páginas por capítulo, indica a presença de tarefas, quizes e afins.
+A plataforma irá sugerir:
 
-> É fundamental verificar essa estrutura e se necessário realizar correções manuais.
+* Estrutura de capítulos
+* Títulos de páginas
+* Atividades e quizzes
 
-## Encerramento
+### ✔ Ação do operador
 
-## Próxima etapa
+* Corrigir incoerências
+* Ajustar títulos
+* Validar progressão lógica
+
+> ⚠️ **Atenção Crítica**
+>
+> Não avance sem revisar.
+> Erros aqui se propagam para todo o curso.
+
+Exemplo:
+<!-- Ilustração - print da tela -->
+![Print visualizar estrutura](images/3-7_preEstrutura.png)
+
+# ✅ Encerramento
+
+Após validação:
+
+1. Clique em **"Gerar"**
+2. Aguarde o processamento
+3. Salve e registre o curso gerado
+
+# 🔄 Resultado da Etapa
+
+Ao final, você terá:
+
+* Curso estruturado na plataforma
+* Conteúdo alinhado às Notas de Aula
+* Base pronta para revisão pedagógica final
+
+# ⏭️ Próxima Etapa
+
+[`4_revisao.md`](4_revisao.md) — Revisão Pedagógica e Validação Final
