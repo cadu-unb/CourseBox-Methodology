@@ -73,7 +73,7 @@ CourseBox-Methodology/
 └── 3_data
 ```
 
-Cada diretório possui uma responsabilidade específica dentro do projeto.
+Cada pasta possui uma responsabilidade específica dentro do projeto.
 
 ---
 
