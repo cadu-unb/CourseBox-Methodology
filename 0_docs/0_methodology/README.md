@@ -16,3 +16,7 @@ Descrever o fluxo metodológico de transformação de conteúdos educacionais.
 
 ## 🧠 Conceito
 Cada etapa representa uma fase do pipeline pedagógico.
+
+## FAC
+
+Eu, @Cadu, fico a disposição para realizar correções no caso de eventuais  dúvidas ou ambiguidaes no corpo da metodologia.

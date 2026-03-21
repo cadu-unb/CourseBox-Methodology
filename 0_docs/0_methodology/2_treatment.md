@@ -1,7 +1,27 @@
 <!-- PATH: 0_docs/0_methodology/2_treatment.md -->
 # 🛠️ Etapa 2 — Tratamento de Conteúdo
 
----
+## 📌 Índice
+- [🛠️ Etapa 2 — Tratamento de Conteúdo](#️-etapa-2--tratamento-de-conteúdo)
+  - [📌 Índice](#-índice)
+- [🎯 Visão Geral](#-visão-geral)
+- [🔐 Protocolo de Segurança (Backup)](#-protocolo-de-segurança-backup)
+  - [📂 Estrutura esperada](#-estrutura-esperada)
+  - [✔ Procedimento](#-procedimento)
+- [🤖 Procedimento de Transformação via IA](#-procedimento-de-transformação-via-ia)
+  - [🧰 Ferramentas recomendadas](#-ferramentas-recomendadas)
+  - [📌 Passos](#-passos)
+- [📋 Prompt de Referência (Bloco Copiável)](#-prompt-de-referência-bloco-copiável)
+- [🔍 Fase de Revisão Humana](#-fase-de-revisão-humana)
+  - [✔ Precisão Técnica](#-precisão-técnica)
+  - [✔ Complementação de Exemplos](#-complementação-de-exemplos)
+  - [✔ Controle de Tamanho](#-controle-de-tamanho)
+  - [✔ Qualidade e profundidade](#-qualidade-e-profundidade)
+- [📦 Critérios de Saída](#-critérios-de-saída)
+  - [📁 Local de armazenamento](#-local-de-armazenamento)
+  - [🏷️ Nomenclatura](#️-nomenclatura)
+  - [🔄 Versionamento](#-versionamento)
+- [🧠 Resultado da Etapa](#-resultado-da-etapa)
 
 # 🎯 Visão Geral
 
@@ -13,8 +33,6 @@ Enquanto a etapa anterior focou em **remover ruído**, esta etapa foca em:
 * Organizar o conteúdo
 * Estruturar o raciocínio didático
 * Preparar o material para ingestão pela IA (Coursebox)
-
----
 
 # 🔐 Protocolo de Segurança (Backup)
 
@@ -28,8 +46,6 @@ data/
 │   └── aula_01.txt
 ├── processed/
 ```
-
----
 
 ## ✔ Procedimento
 
@@ -46,14 +62,10 @@ data/raw/
 data/processed/
 ```
 
----
-
 > ⚠️ **Nota Crítica**
 >
 > Nunca edite diretamente o arquivo original.
 > O backup garante rastreabilidade, auditoria e possibilidade de retrabalho.
-
----
 
 # 🤖 Procedimento de Transformação via IA
 
@@ -65,8 +77,6 @@ A transformação do conteúdo será realizada com apoio de ferramentas de IA ge
 * Gemini
 * Grok
 
----
-
 ## 📌 Passos
 
 1. Acesse a ferramenta de IA
@@ -75,13 +85,9 @@ A transformação do conteúdo será realizada com apoio de ferramentas de IA ge
 4. Execute a geração
 5. Copie o resultado gerado
 
----
-
 > 📌 **Nota**
 >
 > Sempre forneça o arquivo completo. Evite colar trechos fragmentados, pois isso compromete a coerência global.
-
----
 
 # 📋 Prompt de Referência (Bloco Copiável)
 
@@ -115,13 +121,9 @@ Com base no arquivo "{nome_do_arquivo}.txt" anexo, realize a estruturação do c
 O resultado deve ser uma Nota de Aula densa e detalhada, eliminando ruídos da fala, mas preservando 100% da riqueza técnica do conteúdo original.
 ```
 
----
-
 # 🔍 Fase de Revisão Humana
 
 Após o retorno da IA, o operador deve realizar uma validação criteriosa.
-
----
 
 ## ✔ Precisão Técnica
 
@@ -131,8 +133,6 @@ Verificar:
 * Terminologia adequada
 * Ausência de distorções geradas pela IA
 
----
-
 ## ✔ Complementação de Exemplos
 
 Se necessário:
@@ -141,8 +141,6 @@ Se necessário:
 * Melhorar explicações ambíguas
 * Inserir analogias úteis
 
----
-
 ## ✔ Controle de Tamanho
 
 Garantir que:
@@ -150,19 +148,17 @@ Garantir que:
 * Parágrafos explicativos tenham entre **100–150 palavras**
 * O conteúdo esteja equilibrado (nem superficial, nem excessivo)
 
----
-
 > ⚠️ **Nota**
 >
 > A IA organiza bem o conteúdo, mas **não substitui validação técnica humana**.
 
----
+## ✔ Qualidade e profundidade
+
+Caso o resultado obtido apresente uma estrutura estritamente em tópicos, separe as seções e submeta-as novamente às ferramentas de IA. Solicite o aprofundamento de cada tema para enriquecer o conteúdo e dar mais densidade ao contexto.
 
 # 📦 Critérios de Saída
 
 Após validação, o material deve ser salvo seguindo padrão definido.
-
----
 
 ## 📁 Local de armazenamento
 
@@ -170,16 +166,12 @@ Após validação, o material deve ser salvo seguindo padrão definido.
 data/processed/
 ```
 
----
-
 ## 🏷️ Nomenclatura
 
 ```text id="8g3v1x"
 aula_01_notas_v1.md
 aula_02_notas_v1.md
 ```
-
----
 
 ## 🔄 Versionamento
 
@@ -190,13 +182,9 @@ aula_01_notas_v2.md
 aula_01_notas_final.md
 ```
 
----
-
 > 📌 **Nota**
 >
 > O versionamento permite rastrear melhorias e evitar perda de informação.
-
----
 
 # 🧠 Resultado da Etapa
 
@@ -206,12 +194,8 @@ Ao final desta etapa, você terá:
 * Conteúdo validado tecnicamente
 * Material pronto para ingestão na Coursebox
 
----
-
 > 🚀 **Resumo Executivo**
 >
 > Esta etapa transforma transcrições em **conteúdo didático utilizável**, garantindo qualidade, clareza e consistência para as próximas fases do pipeline.
 
----
-
-**Próxima etapa:** `03_operation.md` — Operacionalização na Plataforma
+**Próxima etapa:** [`3_operation.md`](3_operation.md) — Operacionalização na Plataforma

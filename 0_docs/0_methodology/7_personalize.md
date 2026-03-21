@@ -1,1 +1,0 @@
-<!-- PATH: 0_docs/0_methodology/7_personalizar.md -->

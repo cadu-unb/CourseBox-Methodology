@@ -1,7 +1,40 @@
 <!-- PATH: 0_docs/0_methodology/1_separation.md -->
 # 🧩 Etapa 1 — Triagem e Preparação Textual
 
----
+## 📌 Índice 
+
+- [🧩 Etapa 1 — Triagem e Preparação Textual](#-etapa-1--triagem-e-preparação-textual)
+  - [📌 Índice](#-índice)
+- [🎯 Introdução Estratégica](#-introdução-estratégica)
+  - [Índice](#índice)
+- [🔍 Diretrizes de Triagem](#-diretrizes-de-triagem)
+  - [Índice](#índice-1)
+  - [✅ Conteúdo Programático (Manter)](#-conteúdo-programático-manter)
+  - [Índice](#índice-2)
+  - [❌ Conteúdo Não Programático (Remover)](#-conteúdo-não-programático-remover)
+  - [Índice](#índice-3)
+  - [⚖️ Zona Cinzenta (Avaliar com Critério)](#️-zona-cinzenta-avaliar-com-critério)
+  - [Índice](#índice-4)
+- [🔗 Ponte Tecnológica](#-ponte-tecnológica)
+  - [Índice](#índice-5)
+  - [📄 Extração de PDFs](#-extração-de-pdfs)
+  - [Índice](#índice-6)
+  - [🎧 Processamento de Áudio/Vídeo](#-processamento-de-áudiovídeo)
+  - [Índice](#índice-7)
+  - [Índice](#índice-8)
+- [📦 Output Esperado](#-output-esperado)
+  - [✔ Limpo](#-limpo)
+  - [Índice](#índice-9)
+  - [✔ Estruturado](#-estruturado)
+  - [Índice](#índice-10)
+  - [✔ Segmentado](#-segmentado)
+  - [Índice](#índice-11)
+  - [✔ Pronto para IA](#-pronto-para-ia)
+  - [Índice](#índice-12)
+  - [Índice](#índice-13)
+- [🧠 Resultado da Etapa](#-resultado-da-etapa)
+  - [Índice](#índice-14)
+  - [Índice](#índice-15)
 
 # 🎯 Introdução Estratégica
 
@@ -30,13 +63,17 @@ Por outro lado, um material bem triado permite:
 >
 > Erros nesta etapa propagam-se por todo o pipeline e são **custosos de corrigir posteriormente**. Invista rigor aqui.
 
----
+## Índice 
+
+- [steriormente**. Invista rigor aqui.](#)
 
 # 🔍 Diretrizes de Triagem
 
 O operador deve atuar como um **curador técnico-pedagógico**, aplicando critérios claros para separar conteúdo útil de material descartável.
 
----
+## Índice 
+
+- [aros para separar conteúdo útil de material descartável.](#)
 
 ## ✅ Conteúdo Programático (Manter)
 
@@ -50,7 +87,9 @@ São elementos diretamente relacionados aos objetivos de aprendizagem:
 * Sequências lógicas de raciocínio
 * Conteúdo alinhado ao plano de ensino
 
----
+## Índice 
+
+- [Conteúdo alinhado ao plano de ensino](#)
 
 ## ❌ Conteúdo Não Programático (Remover)
 
@@ -64,7 +103,9 @@ Devem ser eliminados ou ignorados:
 * Pausas longas ou trechos sem conteúdo
 * Ruído de transcrição (erros evidentes do OCR/ASR)
 
----
+## Índice 
+
+- [Ruído de transcrição (erros evidentes do OCR/ASR)](#)
 
 ## ⚖️ Zona Cinzenta (Avaliar com Critério)
 
@@ -78,13 +119,17 @@ Alguns conteúdos exigem julgamento:
 >
 > Em caso de dúvida, priorize **clareza pedagógica e objetividade**.
 
----
+## Índice 
+
+- [Em caso de dúvida, priorize **clareza pedagógica e objetividade**.](#)
 
 # 🔗 Ponte Tecnológica
 
 A execução desta etapa depende da correta utilização dos pipelines de extração e transcrição.
 
----
+## Índice 
+
+- [anscrição.](#)
 
 ## 📄 Extração de PDFs
 
@@ -98,7 +143,9 @@ Responsável por:
 * Preservação de layout
 * OCR em documentos digitalizados
 
----
+## Índice 
+
+- [OCR em documentos digitalizados](#)
 
 ## 🎧 Processamento de Áudio/Vídeo
 
@@ -111,14 +158,18 @@ Responsável por:
 * Transcrição automática de aulas gravadas
 * Conversão de fala em texto bruto
 
----
+## Índice 
+
+- [Conversão de fala em texto bruto](#)
 
 > ⚠️ **Aviso Operacional**
 >
 > Sempre execute a triagem **após** a extração/transcrição completa.
 > Nunca trabalhe diretamente com arquivos brutos (PDF/vídeo).
 
----
+## Índice 
+
+- [Nunca trabalhe diretamente com arquivos brutos (PDF/vídeo).](#)
 
 # 📦 Output Esperado
 
@@ -130,7 +181,9 @@ Ao final desta etapa, o conteúdo deve estar:
 * Sem duplicações
 * Com linguagem clara
 
----
+## Índice 
+
+- [Com linguagem clara](#)
 
 ## ✔ Estruturado
 
@@ -150,7 +203,9 @@ Aula 01 - Introdução a Circuitos
 3. Exemplos práticos
 ```
 
----
+## Índice 
+
+- [`](#)
 
 ## ✔ Segmentado
 
@@ -170,7 +225,9 @@ modulo_01/
 ├── aula_02.md
 ```
 
----
+## Índice 
+
+- [`](#)
 
 ## ✔ Pronto para IA
 
@@ -180,14 +237,18 @@ O material deve estar:
 * Livre de ambiguidades
 * Com progressão lógica clara
 
----
+## Índice 
+
+- [Com progressão lógica clara](#)
 
 > 📌 **Nota Importante**
 >
 > A IA da Coursebox não “entende intenção pedagógica implícita”.
 > Ela depende de **estrutura explícita e conteúdo bem delimitado**.
 
----
+## Índice 
+
+- [Ela depende de **estrutura explícita e conteúdo bem delimitado**.](#)
 
 # 🧠 Resultado da Etapa
 
@@ -197,13 +258,17 @@ Ao concluir a Triagem e Preparação Textual, você terá:
 * Conteúdo alinhado ao objetivo do curso
 * Base sólida para automação nas próximas etapas
 
----
+## Índice 
+
+- [Base sólida para automação nas próximas etapas](#)
 
 > 🚀 **Resumo Executivo**
 >
 > Esta etapa transforma conteúdo bruto em **matéria-prima pedagógica de alta qualidade**.
 > Sem ela, não há automação confiável.
 
----
+## Índice 
+
+- [Sem ela, não há automação confiável.](#)
 
 **Próxima etapa:** [`02_treatment.md`](2_treatment.md) — Tratamento e Refinamento do Conteúdo
