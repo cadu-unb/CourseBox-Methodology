@@ -1,8 +1,8 @@
 <!-- PATH: RAIZ DO PROJETO -->
 # CourseBox
 
-https://paletadecolores.online/pt/amarelo/mostarda/
-https://emojidb.org/alerta-emojis?utm_source=user_search
+<!-- https://paletadecolores.online/pt/amarelo/mostarda/ -->
+<!-- https://emojidb.org/alerta-emojis?utm_source=user_search -->
 
 Repositório estratégico para a construção, tratamento e organização de cursos na plataforma [CourseBox](https://coursebox.ai).
 
