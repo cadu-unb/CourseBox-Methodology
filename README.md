@@ -12,15 +12,10 @@ Repositório estratégico para a construção, tratamento e organização de cur
   - [📌 Índice](#-índice)
   - [🎯 Objetivo](#-objetivo)
   - [🛠️ Instalação](#️-instalação)
-    - [🔧 O que é o `uv`](#-o-que-é-o-uv)
-    - [🎯 Para que serve o `uv`](#-para-que-serve-o-uv)
-    - [⚡ Por que usar o `uv`](#-por-que-usar-o-uv)
-    - [1. Instalando o `uv`](#1-instalando-o-uv)
-    - [📚 O que é o Doxygen](#-o-que-é-o-doxygen)
-    - [🎯 Para que serve o Doxygen](#-para-que-serve-o-doxygen)
-    - [🧠 Quando usar](#-quando-usar)
-    - [📂 O que ele gera](#-o-que-ele-gera)
-    - [2. Instalando o Doxygen](#2-instalando-o-doxygen)
+    - [1. Instalando o VS Code](#1-instalando-o-vs-code)
+    - [2. Clonando o repositório](#2-clonando-o-repositório)
+    - [3. Instalando o `uv`](#3-instalando-o-uv)
+    - [4. Doxygen (Opcional)](#4-doxygen-opcional)
     - [📌 Resumo](#-resumo)
   - [🚀 Setup](#-setup)
   - [🏗️ Estrutura do projeto](#️-estrutura-do-projeto)
@@ -44,92 +39,71 @@ Este repositório centraliza os procedimentos técnicos e pedagógicos para a cr
 
 ## 🛠️ Instalação
 
-Antes de executar o projeto, é necessário instalar algumas ferramentas.
-Abaixo está uma explicação simples do que cada uma faz e por que é utilizada.
+Antes de executar o projeto, siga as etapas abaixo para preparar o ambiente de desenvolvimento.
 
-### 🔧 O que é o `uv`
+### 1. Instalando o VS Code
 
-O **uv** é uma ferramenta moderna para gerenciar projetos Python.
+O **Visual Studio Code (VS Code)** é o editor de código recomendado para este projeto.
 
-Ele substitui e unifica funções de ferramentas tradicionais como:
+Ele oferece:
 
-* `pip` (instalação de pacotes)
-* `venv` (ambientes virtuais)
-* `pip-tools` (controle de versões)
+* suporte nativo a Python
+* integração com Git
+* extensões úteis para desenvolvimento
 
-### 🎯 Para que serve o `uv`
+📥 Download: https://code.visualstudio.com/
+
+Após instalar, recomenda-se adicionar as extensões:
+
+* Python
+* Pylance
+* Markdown Preview
+
+### 2. Clonando o repositório
+
+O projeto está versionado com **Git**, que é um sistema de controle de versão.
+
+Para obter uma cópia local do projeto (em uma pasta), utilize o comando no seu CMD ou PowerShell:
+
+```bash id="j7x2rl"
+git clone https://github.com/cadu-unb/CourseBox-Methodology.git
+```
+
+### 3. Instalando o `uv`
+
+Este projeto utiliza o **uv** como gerenciador de pacotes para garantir velocidade e reprodutibilidade.
 
 O `uv` é responsável por:
 
-* instalar bibliotecas necessárias para o projeto
-* garantir que todos usem as **mesmas versões** das dependências
-* criar e gerenciar ambientes isolados (evitando conflitos entre projetos)
-* executar comandos Python de forma padronizada
-
-### ⚡ Por que usar o `uv`
-
-* muito mais rápido que ferramentas tradicionais
-* simplifica o setup do ambiente
-* melhora a reprodutibilidade (todos terão o mesmo ambiente)
-
-### 1. Instalando o `uv`
+* instalar dependências
+* gerenciar o ambiente Python
+* executar o projeto
 
 No Windows (PowerShell):
 
-```powershell
+```powershell id="t2h8lw"
 powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
 
-Esse comando:
+### 4. Doxygen (Opcional)
 
-* baixa o instalador oficial do `uv`
-* executa automaticamente a instalação
+O **Doxygen** é uma ferramenta para geração automática de documentação do código.
 
-### 📚 O que é o Doxygen
+Seu uso é opcional, sendo recomendado para:
 
-O **Doxygen** é uma ferramenta de documentação automática.
+* explorar a estrutura do código
+* gerar documentação técnica em HTML
 
-Ele lê o código-fonte do projeto e gera uma documentação organizada em formato web (HTML).
-
-### 🎯 Para que serve o Doxygen
-
-O Doxygen permite:
-
-* visualizar funções, classes e módulos do projeto
-* entender a estrutura do código
-* navegar pelo sistema como se fosse um site
-* gerar documentação técnica automaticamente
-
-### 🧠 Quando usar
-
-O uso do Doxygen é **opcional**, mas recomendado quando:
-
-* você quer entender melhor o código
-* o projeto começa a crescer
-* há mais de um desenvolvedor envolvido
-
-### 📂 O que ele gera
-
-Após executado, o Doxygen cria:
-
-* páginas HTML com documentação
-* navegação por arquivos e funções
-* diagramas (dependendo da configuração)
-
-### 2. Instalando o Doxygen
-
-Página oficial para download:
-
-https://www.doxygen.nl/download.html
-
-Siga as instruções de instalação de acordo com seu sistema operacional.
+📥 Download: https://www.doxygen.nl/download.html
 
 ### 📌 Resumo
 
-| Ferramenta | Função                                   |
-| ---------- | ---------------------------------------- |
-| uv         | Gerenciar dependências e ambiente Python |
-| Doxygen    | Gerar documentação automática do código  |
+| Etapa | Ferramenta | Objetivo                          |
+| ----- | ---------- | --------------------------------- |
+| 1     | VS Code    | Editor de código                  |
+| 2     | Git        | Clonar o repositório              |
+| 3     | uv         | Gerenciar ambiente e dependências |
+| 4     | Doxygen    | Gerar documentação                |
 
 
 ## 🚀 Setup
