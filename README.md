@@ -103,7 +103,7 @@ Seu uso é opcional, sendo recomendado para:
 | 1     | VS Code    | Editor de código                  |
 | 2     | Git        | Clonar o repositório              |
 | 3     | uv         | Gerenciar ambiente e dependências |
-| 4     | Doxygen    | Gerar documentação                |
+| 4     | Doxygen    | Gerar documentação (Opcional)     |
 
 
 ## 🚀 Setup
