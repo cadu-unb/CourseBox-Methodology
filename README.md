@@ -12,8 +12,16 @@ Repositório estratégico para a construção, tratamento e organização de cur
   - [📌 Índice](#-índice)
   - [🎯 Objetivo](#-objetivo)
   - [🛠️ Instalação](#️-instalação)
+    - [🔧 O que é o `uv`](#-o-que-é-o-uv)
+    - [🎯 Para que serve o `uv`](#-para-que-serve-o-uv)
+    - [⚡ Por que usar o `uv`](#-por-que-usar-o-uv)
     - [1. Instalando o `uv`](#1-instalando-o-uv)
-    - [2. Doxygen (Opcional)](#2-doxygen-opcional)
+    - [📚 O que é o Doxygen](#-o-que-é-o-doxygen)
+    - [🎯 Para que serve o Doxygen](#-para-que-serve-o-doxygen)
+    - [🧠 Quando usar](#-quando-usar)
+    - [📂 O que ele gera](#-o-que-ele-gera)
+    - [2. Instalando o Doxygen](#2-instalando-o-doxygen)
+    - [📌 Resumo](#-resumo)
   - [🚀 Setup](#-setup)
   - [🏗️ Estrutura do projeto](#️-estrutura-do-projeto)
     - [📁 0\_docs](#-0_docs)
@@ -36,17 +44,93 @@ Este repositório centraliza os procedimentos técnicos e pedagógicos para a cr
 
 ## 🛠️ Instalação
 
-Este projeto utiliza o **[uv](https://docs.astral.sh/uv/)** como gerenciador de pacotes para garantir velocidade e reprodutibilidade.
+Antes de executar o projeto, é necessário instalar algumas ferramentas.
+Abaixo está uma explicação simples do que cada uma faz e por que é utilizada.
+
+### 🔧 O que é o `uv`
+
+O **uv** é uma ferramenta moderna para gerenciar projetos Python.
+
+Ele substitui e unifica funções de ferramentas tradicionais como:
+
+* `pip` (instalação de pacotes)
+* `venv` (ambientes virtuais)
+* `pip-tools` (controle de versões)
+
+### 🎯 Para que serve o `uv`
+
+O `uv` é responsável por:
+
+* instalar bibliotecas necessárias para o projeto
+* garantir que todos usem as **mesmas versões** das dependências
+* criar e gerenciar ambientes isolados (evitando conflitos entre projetos)
+* executar comandos Python de forma padronizada
+
+### ⚡ Por que usar o `uv`
+
+* muito mais rápido que ferramentas tradicionais
+* simplifica o setup do ambiente
+* melhora a reprodutibilidade (todos terão o mesmo ambiente)
 
 ### 1. Instalando o `uv`
+
 No Windows (PowerShell):
+
 ```powershell
-powershell -ExecutionPolicy ByPass -c "irm [https://astral.sh/uv/install.ps1](https://astral.sh/uv/install.ps1) | iex"
+powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
 ```
 
-### 2. Doxygen (Opcional)
+Esse comando:
 
-- **Página de Referência** : [link](https://www.doxygen.nl/download.html).
+* baixa o instalador oficial do `uv`
+* executa automaticamente a instalação
+
+### 📚 O que é o Doxygen
+
+O **Doxygen** é uma ferramenta de documentação automática.
+
+Ele lê o código-fonte do projeto e gera uma documentação organizada em formato web (HTML).
+
+### 🎯 Para que serve o Doxygen
+
+O Doxygen permite:
+
+* visualizar funções, classes e módulos do projeto
+* entender a estrutura do código
+* navegar pelo sistema como se fosse um site
+* gerar documentação técnica automaticamente
+
+### 🧠 Quando usar
+
+O uso do Doxygen é **opcional**, mas recomendado quando:
+
+* você quer entender melhor o código
+* o projeto começa a crescer
+* há mais de um desenvolvedor envolvido
+
+### 📂 O que ele gera
+
+Após executado, o Doxygen cria:
+
+* páginas HTML com documentação
+* navegação por arquivos e funções
+* diagramas (dependendo da configuração)
+
+### 2. Instalando o Doxygen
+
+Página oficial para download:
+
+https://www.doxygen.nl/download.html
+
+Siga as instruções de instalação de acordo com seu sistema operacional.
+
+### 📌 Resumo
+
+| Ferramenta | Função                                   |
+| ---------- | ---------------------------------------- |
+| uv         | Gerenciar dependências e ambiente Python |
+| Doxygen    | Gerar documentação automática do código  |
+
 
 ## 🚀 Setup
 
@@ -74,8 +158,6 @@ CourseBox-Methodology/
 ```
 
 Cada pasta possui uma responsabilidade específica dentro do projeto.
-
----
 
 ### 📁 0_docs
 
@@ -107,8 +189,6 @@ Subpastas:
 * **3_guides**
   Guias técnicos do projeto, incluindo convenções de código e padrões de desenvolvimento.
 
----
-
 ### 📁 1_src
 
 Contém **todo o código fonte do projeto**.
@@ -136,8 +216,6 @@ Componentes principais:
 * **pipeline**
   Fluxos de processamento que orquestram serviços para executar tarefas completas, como conversão de vídeo em texto.
 
----
-
 ### 📁 2_devtools
 
 Contém **ferramentas auxiliares utilizadas durante o desenvolvimento**.
@@ -153,8 +231,6 @@ Exemplo:
 ```
 
 O script `file_tree.py` é utilizado para gerar automaticamente a **árvore de diretórios do projeto**.
-
----
 
 ### 📁 3_data
 
