@@ -229,6 +229,10 @@ Exemplo de erro:
 > Nunca modifique a estrutura base.
 > Apenas substitua conteúdo.
 
+# 🔎 Material Suplementar
+
+▶️ [YouTube](https://youtu.be/99QXkotCS-Q)
+
 # 📦 Resultado da Etapa
 
 Ao final, você terá:

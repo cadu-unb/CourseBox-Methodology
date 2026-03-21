@@ -43,6 +43,7 @@ O foco aqui é operacional: configurar corretamente os inputs para garantir que 
   - [👁️ Revisão Pré-Processamento](#️-revisão-pré-processamento)
     - [✔ O que validar](#-o-que-validar)
     - [✔ Ação do operador](#-ação-do-operador)
+- [🔎 Material Suplementar](#-material-suplementar)
 - [✅ Encerramento](#-encerramento)
 - [🔄 Resultado da Etapa](#-resultado-da-etapa)
 - [⏭️ Próxima Etapa](#️-próxima-etapa)
@@ -321,6 +322,10 @@ A plataforma irá sugerir:
 Exemplo:
 <!-- Ilustração - print da tela -->
 ![Print visualizar estrutura](images/3-7_preEstrutura.png)
+
+# 🔎 Material Suplementar
+
+▶️ [YouTube](https://youtu.be/y2t218EB6W8)
 
 # ✅ Encerramento
 
