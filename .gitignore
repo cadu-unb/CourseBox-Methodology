@@ -16,3 +16,31 @@ caminhos.txt
 
 # VSCODE
 .vscode
+
+# Não suba arquivos Vídeo ou Audio mp4, mp3
+
+## Video formats
+*.mp4
+*.mkv
+*.avi
+*.mov
+*.wmv
+*.flv
+*.webm
+*.m4v
+*.mpg
+*.mpeg
+*.3gp
+*.ogv
+
+## Audio formats
+*.mp3
+*.wav
+*.ogg
+*.flac
+*.m4a
+*.aac
+*.wma
+*.aiff
+*.mid
+*.midi
