@@ -44,3 +44,12 @@ caminhos.txt
 *.aiff
 *.mid
 *.midi
+
+# 1. Ignorar todo o conteúdo da pasta 3_data/1_raw
+3_data/1_raw/**/*
+
+# 2. Abrir exceções para os arquivos README.md em qualquer nível dentro de 3_data
+!3_data/**/README.md
+
+# 3. Garantir que as pastas em si não sejam ignoradas (necessário para o Git "enxergar" os arquivos dentro)
+!3_data/2_processed/*
