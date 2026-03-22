@@ -1,9 +1,7 @@
 <!-- PATH: 0_docs/0_methodology/6_improvement.md -->
 
-<!-- PATH: 0_docs/0_methodology/6_improvement.md -->
-
 # 🔧 Etapa 6 — Apuração e Melhoria Contínua
-;
+
 # 🎯 Objetivo
 
 Nesta etapa, o autor realiza a **implementação sistemática das melhorias** com base no feedback recebido em `5_feedback.md`.

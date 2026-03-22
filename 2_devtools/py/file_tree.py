@@ -3,7 +3,7 @@ import os
 DEFAULT_CONFIG: dict = {
     "ignored_dirs":       ["__pycache__", ".git", "node_modules", ".vscode"],
     "visible_extensions": [],
-    "ignored_extensions": [],
+    "ignored_extensions": [".png"],
     "visible_files":      [],
 }
 

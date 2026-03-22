@@ -4,26 +4,29 @@
 ## 📌 Índice
 - [🛠️ Etapa 2 — Tratamento de Conteúdo](#️-etapa-2--tratamento-de-conteúdo)
   - [📌 Índice](#-índice)
-- [🎯 Visão Geral](#-visão-geral)
-- [🔐 Protocolo de Segurança (Backup)](#-protocolo-de-segurança-backup)
-  - [📂 Estrutura esperada](#-estrutura-esperada)
-  - [✔ Procedimento](#-procedimento)
-- [🤖 Procedimento de Transformação via IA](#-procedimento-de-transformação-via-ia)
-  - [🧰 Ferramentas recomendadas](#-ferramentas-recomendadas)
-  - [📌 Passos](#-passos)
-- [📋 Prompt de Referência (Bloco Copiável)](#-prompt-de-referência-bloco-copiável)
+  - [🎯 Visão Geral](#-visão-geral)
+  - [🔐 Protocolo de Segurança (Backup)](#-protocolo-de-segurança-backup)
+    - [📂 Estrutura esperada](#-estrutura-esperada)
+    - [✔ Procedimento](#-procedimento)
+  - [🤖 Procedimento de Transformação via IA](#-procedimento-de-transformação-via-ia)
+    - [🧰 Ferramentas recomendadas](#-ferramentas-recomendadas)
+    - [📌 Passos](#-passos)
+  - [📋 Prompt de Referência (Bloco Copiável)](#-prompt-de-referência-bloco-copiável)
+- [📁 Local de armazenamento](#-local-de-armazenamento)
 - [🔍 Fase de Revisão Humana](#-fase-de-revisão-humana)
-  - [✔ Precisão Técnica](#-precisão-técnica)
-  - [✔ Complementação de Exemplos](#-complementação-de-exemplos)
-  - [✔ Controle de Tamanho](#-controle-de-tamanho)
-  - [✔ Qualidade e profundidade](#-qualidade-e-profundidade)
+  - [Análise dos Resultados](#análise-dos-resultados)
+    - [✔ Precisão Técnica](#-precisão-técnica)
+    - [✔ Complementação de Exemplos](#-complementação-de-exemplos)
+  - [Extensão do Conteúdo](#extensão-do-conteúdo)
+    - [✔ Controle de Tamanho](#-controle-de-tamanho)
+    - [✔ Qualidade e profundidade](#-qualidade-e-profundidade)
 - [📦 Critérios de Saída](#-critérios-de-saída)
-  - [📁 Local de armazenamento](#-local-de-armazenamento)
-  - [🏷️ Nomenclatura](#️-nomenclatura)
-  - [🔄 Versionamento](#-versionamento)
-- [🧠 Resultado da Etapa](#-resultado-da-etapa)
+  - [📁 Local de armazenamento](#-local-de-armazenamento-1)
+    - [🏷️ Nomenclatura](#️-nomenclatura)
+    - [🔄 Versionamento](#-versionamento)
+  - [🧠 Resultado da Etapa](#-resultado-da-etapa)
 
-# 🎯 Visão Geral
+## 🎯 Visão Geral
 
 A etapa de **Tratamento de Conteúdo** tem como objetivo transformar o material bruto (transcrições) em **Notas de Aula estruturadas, coerentes e pedagogicamente utilizáveis**.
 
@@ -34,32 +37,31 @@ Enquanto a etapa anterior focou em **remover ruído**, esta etapa foca em:
 * Estruturar o raciocínio didático
 * Preparar o material para ingestão pela IA (Coursebox)
 
-# 🔐 Protocolo de Segurança (Backup)
+## 🔐 Protocolo de Segurança (Backup)
 
-Antes de qualquer modificação, o operador **DEVE obrigatoriamente** preservar o material original.
+**VERIFIQUE** se o material base foi preservado na etapa anterior.
 
-## 📂 Estrutura esperada
+### 📂 Estrutura esperada
 
 ```text id="x3k9wd"
-data/
-├── raw/
-│   └── aula_01.txt
-├── processed/
+3_data/
+├── 2_processed/
+│   ├── ArcTel/
+│   │   ├── 1_transcricao_inicial/
+│   │   │   ├── aula_01.txt
+│   │   │   └── ementa_01.txt
+│   │   ├── 2_notas_inicias/
+│   │   └── 3_notas_finalizadas/
 ```
 
-## ✔ Procedimento
+### ✔ Procedimento
 
 1. Localize o arquivo de transcrição original
-2. Copie para:
 
-```bash id="3u7c9o"
-data/raw/
-```
-
-3. Trabalhe exclusivamente em uma cópia dentro de:
+2. Trabalhe exclusivamente em uma cópia dentro de:
 
 ```bash id="j2p8sl"
-data/processed/
+data/raw/
 ```
 
 > ⚠️ **Nota Crítica**
@@ -67,20 +69,20 @@ data/processed/
 > Nunca edite diretamente o arquivo original.
 > O backup garante rastreabilidade, auditoria e possibilidade de retrabalho.
 
-# 🤖 Procedimento de Transformação via IA
+## 🤖 Procedimento de Transformação via IA
 
 A transformação do conteúdo será realizada com apoio de ferramentas de IA generativa.
 
-## 🧰 Ferramentas recomendadas
+### 🧰 Ferramentas recomendadas
 
 * ChatGPT
 * Gemini
 * Grok
 
-## 📌 Passos
+### 📌 Passos
 
 1. Acesse a ferramenta de IA
-2. Anexe o arquivo `.txt` da transcrição
+2. Anexe o(s) arquivo(s) `.txt` da transcrição (e se tiver trecho da ementa.)
 3. Utilize o **Prompt de Transformação** (abaixo)
 4. Execute a geração
 5. Copie o resultado gerado
@@ -89,18 +91,20 @@ A transformação do conteúdo será realizada com apoio de ferramentas de IA ge
 >
 > Sempre forneça o arquivo completo. Evite colar trechos fragmentados, pois isso compromete a coerência global.
 
-# 📋 Prompt de Referência (Bloco Copiável)
+## 📋 Prompt de Referência (Bloco Copiável)
 
-<!-- Para evitar bug de compreensão deixa uma espaço dedicado no documento para isso, ok? -->
+> Para evitar bug de compreensão deixa uma espaço dedicado no documento para isso, ok?
 
 ```md id="prompt-transformacao"
-# Role
+# Solcitação de Análise de transcrição e Escrita
+
+## Role
 Você é um Designer Instrucional Sênior especializado em transformar transcrições brutas de vídeo (Whisper) em Notas de Aula estruturadas, ricas e pedagogicamente organizadas.
 
-# Contexto
+## Contexto
 Estou desenvolvendo um curso na plataforma Coursebox.ai. Recebi a transcrição bruta da aula "{nome_da_aula}" e preciso convertê-la em uma Apostila/Nota de Aula que servirá de base para o roteiro final do curso.
 
-# Tarefa: Processamento de Transcrição para Notas de Aula
+## Tarefa: Processamento de Transcrição para Notas de Aula
 Com base no arquivo "{nome_do_arquivo}.txt" anexo, realize a estruturação do conteúdo seguindo estes pilares:
 
 1. **Estrutura de Tópicos:** Organize o conteúdo em Seções e Subseções lógicas. Use títulos descritivos que facilitem a navegação do aluno.
@@ -112,20 +116,30 @@ Com base no arquivo "{nome_do_arquivo}.txt" anexo, realize a estruturação do c
    - **Boxes de Atenção:** Crie seções de "Dica do Especialista" ou "Atenção" para pontos onde o professor deu ênfase.
 5. **Resumo Executivo:** Ao final, crie um "Quadro Resumo" com os pontos principais abordados na aula.
 
-# Requisitos de Formatação
+## Requisitos de Formatação
 - Utilize Markdown para toda a estruturação.
 - Use listas com marcadores (bullets) para procedimentos e características.
 - Se houver fórmulas ou códigos mencionados, formate-os adequadamente em blocos específicos.
 
-# Objetivo Final
+## Objetivo Final
 O resultado deve ser uma Nota de Aula densa e detalhada, eliminando ruídos da fala, mas preservando 100% da riqueza técnica do conteúdo original.
+```
+
+# 📁 Local de armazenamento
+
+Armazene essa primeira versão gerada pela IA no local especificado abaixo:
+
+```text id="p6l2ys"
+data/processed/ArcTel/2_notas_inicias/
 ```
 
 # 🔍 Fase de Revisão Humana
 
+## Análise dos Resultados
+
 Após o retorno da IA, o operador deve realizar uma validação criteriosa.
 
-## ✔ Precisão Técnica
+### ✔ Precisão Técnica
 
 Verificar:
 
@@ -133,7 +147,7 @@ Verificar:
 * Terminologia adequada
 * Ausência de distorções geradas pela IA
 
-## ✔ Complementação de Exemplos
+### ✔ Complementação de Exemplos
 
 Se necessário:
 
@@ -141,7 +155,30 @@ Se necessário:
 * Melhorar explicações ambíguas
 * Inserir analogias úteis
 
-## ✔ Controle de Tamanho
+## Extensão do Conteúdo
+
+Os algoritmos da plataforma [Coursebox.ai](https://www.coursebox.ai/pt) precisam de uma quantidade mínima de conteúdo para garantir uma geração de qualidade.
+
+Por essa razão vamos dedica um tempo especial retrabalhando o arquivo gerado na etapa de `2_notas_inicias`. Aproveitando as sessões definidas nele, vamos retornar à IA escolhida desde o início e sessão por sessão utilizar o prompt:
+
+```md id="prompt-transformacao-2"
+# Role
+Você é um Designer Instrucional e Especialista em Redação Técnica EAD, com foco em transformar transcrições brutas em materiais didáticos de alta densidade e clareza pedagógica.
+
+# Contexto
+O objetivo é refinar o primeiro rascunho de uma apostila gerada a partir de transcrições de vídeo. O conteúdo original é tecnicamente correto, mas carece de fluidez didática, formatação estruturada e profundidade em conceitos-chave.
+
+# Objeto de Trabalho
+- Tema da Aula: {TEMA_DA_AULA}
+- Lista de Unidades/Sessões: 
+  - _Unidade/Sessão Atual_: {IDENTIFICADOR_DA_UNIDADE com ênfase de negrito} (ex: Unidade I)
+
+# Conteúdo Base (Rascunho)
+```md
+{COLE_AQUI_O_TRECHO_DA_SESSÃO}
+```
+
+### ✔ Controle de Tamanho
 
 Garantir que:
 
@@ -152,7 +189,7 @@ Garantir que:
 >
 > A IA organiza bem o conteúdo, mas **não substitui validação técnica humana**.
 
-## ✔ Qualidade e profundidade
+### ✔ Qualidade e profundidade
 
 Caso o resultado obtido apresente uma estrutura estritamente em tópicos, separe as seções e submeta-as novamente às ferramentas de IA. Solicite o aprofundamento de cada tema para enriquecer o conteúdo e dar mais densidade ao contexto.
 
@@ -163,17 +200,17 @@ Após validação, o material deve ser salvo seguindo padrão definido.
 ## 📁 Local de armazenamento
 
 ```text id="p6l2ys"
-data/processed/
+data/processed/ArcTel/3_notas_finalizadas/
 ```
 
-## 🏷️ Nomenclatura
+### 🏷️ Nomenclatura
 
 ```text id="8g3v1x"
 aula_01_notas_v1.md
 aula_02_notas_v1.md
 ```
 
-## 🔄 Versionamento
+### 🔄 Versionamento
 
 Caso haja revisões:
 
@@ -186,7 +223,7 @@ aula_01_notas_final.md
 >
 > O versionamento permite rastrear melhorias e evitar perda de informação.
 
-# 🧠 Resultado da Etapa
+## 🧠 Resultado da Etapa
 
 Ao final desta etapa, você terá:
 

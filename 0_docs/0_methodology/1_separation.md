@@ -1,274 +1,201 @@
 <!-- PATH: 0_docs/0_methodology/1_separation.md -->
-# 🧩 Etapa 1 — Triagem e Preparação Textual
 
-## 📌 Índice 
+# 🧩 Etapa 1 — Coleta, Extração e Preparação de Dados
 
-- [🧩 Etapa 1 — Triagem e Preparação Textual](#-etapa-1--triagem-e-preparação-textual)
-  - [📌 Índice](#-índice)
-- [🎯 Introdução Estratégica](#-introdução-estratégica)
-  - [Índice](#índice)
-- [🔍 Diretrizes de Triagem](#-diretrizes-de-triagem)
-  - [Índice](#índice-1)
-  - [✅ Conteúdo Programático (Manter)](#-conteúdo-programático-manter)
-  - [Índice](#índice-2)
-  - [❌ Conteúdo Não Programático (Remover)](#-conteúdo-não-programático-remover)
-  - [Índice](#índice-3)
-  - [⚖️ Zona Cinzenta (Avaliar com Critério)](#️-zona-cinzenta-avaliar-com-critério)
-  - [Índice](#índice-4)
-- [🔗 Ponte Tecnológica](#-ponte-tecnológica)
-  - [Índice](#índice-5)
-  - [📄 Extração de PDFs](#-extração-de-pdfs)
-  - [Índice](#índice-6)
-  - [🎧 Processamento de Áudio/Vídeo](#-processamento-de-áudiovídeo)
-  - [Índice](#índice-7)
-  - [Índice](#índice-8)
-- [📦 Output Esperado](#-output-esperado)
-  - [✔ Limpo](#-limpo)
-  - [Índice](#índice-9)
-  - [✔ Estruturado](#-estruturado)
-  - [Índice](#índice-10)
-  - [✔ Segmentado](#-segmentado)
-  - [Índice](#índice-11)
-  - [✔ Pronto para IA](#-pronto-para-ia)
-  - [Índice](#índice-12)
-  - [Índice](#índice-13)
+## 🎯 Objetivo da Etapa
+
+Estabelecer a **ponte operacional entre o armazenamento em nuvem e o conteúdo textual bruto editável**, garantindo que todo material de entrada esteja:
+
+* Disponível localmente
+* Convertido para formato manipulável (`.txt`)
+* Organizado conforme a governança do projeto
+
+## 📌 Sumário
+
+- [🧩 Etapa 1 — Coleta, Extração e Preparação de Dados](#-etapa-1--coleta-extração-e-preparação-de-dados)
+  - [🎯 Objetivo da Etapa](#-objetivo-da-etapa)
+  - [📌 Sumário](#-sumário)
+  - [⚙️ Fluxo de Execução](#️-fluxo-de-execução)
+  - [📥 Passo 1 — Coleta (Download dos Materiais)](#-passo-1--coleta-download-dos-materiais)
+    - [🔍 Procedimento](#-procedimento)
+    - [⚠️ Governança de Versionamento (Git)](#️-governança-de-versionamento-git)
+    - [📁 Regra Crítica de Sincronização](#-regra-crítica-de-sincronização)
+    - [🌿 Estratégia para Arquivos Pesados](#-estratégia-para-arquivos-pesados)
+    - [⚠️ Regras adicionais](#️-regras-adicionais)
+  - [🔄 Passo 2 — Extração (Conversão para Texto)](#-passo-2--extração-conversão-para-texto)
+    - [🎯 Objetivo](#-objetivo)
+    - [🛠️ Ferramental Obrigatório](#️-ferramental-obrigatório)
+    - [📚 Documentação de Apoio](#-documentação-de-apoio)
+    - [📌 Procedimento](#-procedimento-1)
+  - [📦 Passo 3 — Armazenamento (Organização dos Dados)](#-passo-3--armazenamento-organização-dos-dados)
+    - [📁 Destino Obrigatório](#-destino-obrigatório)
+    - [🧭 Estrutura de Versionamento](#-estrutura-de-versionamento)
+    - [✔ Regras](#-regras)
+- [✅ Encerramento e Validação](#-encerramento-e-validação)
+  - [✔ Checklist](#-checklist)
+  - [🔍 Verificação final](#-verificação-final)
+- [🔄 Encaminhamento](#-encaminhamento)
 - [🧠 Resultado da Etapa](#-resultado-da-etapa)
-  - [Índice](#índice-14)
-  - [Índice](#índice-15)
 
-# 🎯 Introdução Estratégica
+## ⚙️ Fluxo de Execução
 
-A etapa de **Triagem e Preparação Textual** é o ponto mais crítico de todo o pipeline Arctel. É aqui que ocorre a separação entre:
+Execute esta etapa seguindo rigorosamente os 3 passos:
 
-* **Sinal** → conteúdo pedagógico relevante
-* **Ruído** → redundâncias, desvios e elementos não instrucionais
+1. **Identificar** → localizar e baixar os arquivos de origem
+2. **Extrair** → converter mídias para texto bruto (`.txt`)
+3. **Armazenar** → organizar os arquivos no diretório correto
 
-Em ambientes de ensino assistidos por IA, como o Coursebox, a qualidade do input determina diretamente a qualidade do output. Este princípio é conhecido como:
+## 📥 Passo 1 — Coleta (Download dos Materiais)
 
-> **Garbage In, Garbage Out (GIGO)**
+### 🔍 Procedimento
 
-Se conteúdos irrelevantes, ambíguos ou desorganizados forem fornecidos à IA:
+1. Consulte o documento:
 
-* A estrutura do curso será inconsistente
-* Os objetivos de aprendizagem serão diluídos
-* A progressão pedagógica será comprometida
+👉 **`0_docs/0_cloud.md`**
 
-Por outro lado, um material bem triado permite:
+2. Identifique os materiais disponíveis:
 
-* Geração automática de módulos coerentes
-* Segmentação lógica de aulas
-* Maior precisão na criação de atividades e avaliações
+   * PDFs
+   * Vídeos de aula
+   * Áudios
 
-> ⚠️ **Aviso Crítico**
+3. Realize o download dos arquivos necessários
+
+### ⚠️ Governança de Versionamento (Git)
+
+> **[CUIDADO]**
 >
-> Erros nesta etapa propagam-se por todo o pipeline e são **custosos de corrigir posteriormente**. Invista rigor aqui.
+> O GitHub possui limite de **100MB por arquivo**.
+> Arquivos de vídeo e áudio frequentemente ultrapassam esse limite.
 
-## Índice 
+### 📁 Regra Crítica de Sincronização
 
-- [steriormente**. Invista rigor aqui.](#)
+Você deve:
 
-# 🔍 Diretrizes de Triagem
+* ✅ Sincronizar apenas:
 
-O operador deve atuar como um **curador técnico-pedagógico**, aplicando critérios claros para separar conteúdo útil de material descartável.
+  **`3_data/2_processed/`**
 
-## Índice 
+* ❌ NÃO sincronizar:
 
-- [aros para separar conteúdo útil de material descartável.](#)
+  **`3_data/1_raw/`** *(exceto o `README.md`)*
 
-## ✅ Conteúdo Programático (Manter)
+### 🌿 Estratégia para Arquivos Pesados
 
-São elementos diretamente relacionados aos objetivos de aprendizagem:
+Caso precise manipular arquivos grandes:
 
-* Conceitos fundamentais e definições
-* Explicações estruturadas do conteúdo
-* Exemplos didáticos relevantes
-* Demonstrações práticas
-* Exercícios comentados
-* Sequências lógicas de raciocínio
-* Conteúdo alinhado ao plano de ensino
+* Crie uma **branch temporária**
+* Trabalhe localmente
+* NÃO realize push de arquivos brutos pesados
 
-## Índice 
+### ⚠️ Regras adicionais
 
-- [Conteúdo alinhado ao plano de ensino](#)
-
-## ❌ Conteúdo Não Programático (Remover)
-
-Devem ser eliminados ou ignorados:
-
-* Conversas informais (ex: saudações, comentários pessoais)
-* Digressões fora do tema da aula
-* Repetições desnecessárias
-* Problemas técnicos (ex: “estão me ouvindo?”)
-* Interações administrativas (ex: prazos, avisos institucionais)
-* Pausas longas ou trechos sem conteúdo
-* Ruído de transcrição (erros evidentes do OCR/ASR)
-
-## Índice 
-
-- [Ruído de transcrição (erros evidentes do OCR/ASR)](#)
-
-## ⚖️ Zona Cinzenta (Avaliar com Critério)
-
-Alguns conteúdos exigem julgamento:
-
-* Perguntas de alunos → manter apenas se agregarem valor conceitual
-* Analogias → manter se forem didaticamente relevantes
-* Comentários contextuais → manter apenas se ajudam na compreensão
-
-> 📌 **Nota**
+> **[CUIDADO]**
 >
-> Em caso de dúvida, priorize **clareza pedagógica e objetividade**.
+> O projeto já possui um `.gitignore` configurado para evitar versionamento de arquivos problemáticos.
+> **Verifique antes de criar ou subir novos arquivos.**
 
-## Índice 
+## 🔄 Passo 2 — Extração (Conversão para Texto)
 
-- [Em caso de dúvida, priorize **clareza pedagógica e objetividade**.](#)
+### 🎯 Objetivo
 
-# 🔗 Ponte Tecnológica
-
-A execução desta etapa depende da correta utilização dos pipelines de extração e transcrição.
-
-## Índice 
-
-- [anscrição.](#)
-
-## 📄 Extração de PDFs
-
-Utilize o guia técnico:
-
-👉 [text_extractor.md](../../1_src/arctel/services/text_extractor.md)
-
-Responsável por:
-
-* Extração estruturada de texto
-* Preservação de layout
-* OCR em documentos digitalizados
-
-## Índice 
-
-- [OCR em documentos digitalizados](#)
-
-## 🎧 Processamento de Áudio/Vídeo
-
-Utilize o guia técnico:
-
-👉 [transcription.md](../../1_src/arctel/services/transcription.md)
-
-Responsável por:
-
-* Transcrição automática de aulas gravadas
-* Conversão de fala em texto bruto
-
-## Índice 
-
-- [Conversão de fala em texto bruto](#)
-
-> ⚠️ **Aviso Operacional**
->
-> Sempre execute a triagem **após** a extração/transcrição completa.
-> Nunca trabalhe diretamente com arquivos brutos (PDF/vídeo).
-
-## Índice 
-
-- [Nunca trabalhe diretamente com arquivos brutos (PDF/vídeo).](#)
-
-# 📦 Output Esperado
-
-Ao final desta etapa, o conteúdo deve estar:
-
-## ✔ Limpo
-
-* Sem ruídos ou conteúdos irrelevantes
-* Sem duplicações
-* Com linguagem clara
-
-## Índice 
-
-- [Com linguagem clara](#)
-
-## ✔ Estruturado
-
-Organizado por:
-
-* Aula
-* Tópico
-* Subtópico
-
-Exemplo:
+Converter todo conteúdo para o formato:
 
 ```text
-Aula 01 - Introdução a Circuitos
-
-1. Conceito de circuito elétrico
-2. Componentes básicos
-3. Exemplos práticos
+.txt
 ```
 
-## Índice 
+### 🛠️ Ferramental Obrigatório
 
-- [`](#)
+Utilize os scripts:
 
-## ✔ Segmentado
+* **`text_extractor.py`** → para PDFs
+* **`transcription.py`** → para áudio/vídeo
 
-Idealmente em arquivos separados:
+### 📚 Documentação de Apoio
 
-```text
-aula_01.md
-aula_02.md
-aula_03.md
-```
+Consulte:
 
-Ou:
+* 👉 **`1_src/arctel/services/text_extractor.md`**
+* 👉 **`1_src/arctel/services/transcription.md`**
 
-```text
-modulo_01/
-├── aula_01.md
-├── aula_02.md
-```
+### 📌 Procedimento
 
-## Índice 
+1. Execute os scripts apropriados
+2. Gere arquivos `.txt` correspondentes
+3. Valide se o conteúdo foi extraído corretamente
 
-- [`](#)
-
-## ✔ Pronto para IA
-
-O material deve estar:
-
-* Semanticamente coerente
-* Livre de ambiguidades
-* Com progressão lógica clara
-
-## Índice 
-
-- [Com progressão lógica clara](#)
-
-> 📌 **Nota Importante**
+> **[CUIDADO]**
 >
-> A IA da Coursebox não “entende intenção pedagógica implícita”.
-> Ela depende de **estrutura explícita e conteúdo bem delimitado**.
+> Não prossiga com arquivos incompletos ou corrompidos.
+> A qualidade da extração impacta todas as etapas seguintes.
 
-## Índice 
+## 📦 Passo 3 — Armazenamento (Organização dos Dados)
 
-- [Ela depende de **estrutura explícita e conteúdo bem delimitado**.](#)
+### 📁 Destino Obrigatório
+
+Armazene os arquivos em:
+
+**`3_data/2_processed/ArcTel/1_transcricao_inicial/`**
+
+### 🧭 Estrutura de Versionamento
+
+O pipeline segue 3 níveis de evolução:
+
+```text
+3_data/2_processed/ArcTel/
+├── 1_transcricao_inicial/   ← Etapa 1 (este documento)
+├── 2_notas_iniciais/        ← Etapa 2 (2_treatment.md)
+└── 3_notas_finalizadas/     ← Etapa 2 (refino final)
+```
+
+### ✔ Regras
+
+* Nomeie arquivos de forma consistente:
+
+```text
+aula_01.txt
+aula_02.txt
+```
+
+* Garanta separação por aula ou módulo
+* Evite arquivos agregados excessivamente grandes
+
+# ✅ Encerramento e Validação
+
+Antes de concluir a etapa:
+
+## ✔ Checklist
+
+* [ ] Todos os arquivos foram baixados corretamente
+* [ ] Conversão para `.txt` realizada com sucesso
+* [ ] Arquivos armazenados no diretório correto
+* [ ] Nenhum arquivo pesado foi commitado indevidamente
+* [ ] Estrutura respeita o padrão do projeto
+
+## 🔍 Verificação final
+
+* Confirme integridade na **branch principal (`main`)**
+* Valide se não há conflitos ou arquivos indevidos
+
+> **[CUIDADO]**
+>
+> Um erro de versionamento nesta etapa pode comprometer todo o repositório.
+
+# 🔄 Encaminhamento
+
+Após validação completa, prossiga para:
+
+👉 **`2_treatment.md`** — Tratamento e Estruturação do Conteúdo
 
 # 🧠 Resultado da Etapa
 
-Ao concluir a Triagem e Preparação Textual, você terá:
+Ao final, você terá:
 
-* Um corpus limpo e confiável
-* Conteúdo alinhado ao objetivo do curso
-* Base sólida para automação nas próximas etapas
-
-## Índice 
-
-- [Base sólida para automação nas próximas etapas](#)
+* Conteúdo bruto convertido em texto
+* Estrutura organizada e versionada corretamente
+* Base pronta para tratamento e refinamento
 
 > 🚀 **Resumo Executivo**
 >
-> Esta etapa transforma conteúdo bruto em **matéria-prima pedagógica de alta qualidade**.
-> Sem ela, não há automação confiável.
-
-## Índice 
-
-- [Sem ela, não há automação confiável.](#)
-
-**Próxima etapa:** [`02_treatment.md`](2_treatment.md) — Tratamento e Refinamento do Conteúdo
+> Esta etapa garante que os dados estejam **acessíveis, processáveis e governados corretamente**, evitando riscos operacionais e técnicos nas fases seguintes.
