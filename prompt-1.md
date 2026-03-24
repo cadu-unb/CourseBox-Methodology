@@ -16,7 +16,7 @@ ATRIBUTO FUNCIONAL ALVO:
 {description_AtributoFuncional}
 
 OBJETIVO DO CURSO:
-Ensinar a usar {Ferramenta} para:
+Ensinar a usar {Ferramenta} para:****
 → {Habilidade_long}
 
 TÍTULO BASE:
@@ -43,9 +43,6 @@ Vou preferir manter a abordagem atual.
 1. Explosão combinatória:
 Essa é a intenção de quem solicitou a construção dessa metodologia;
 
-3. Falta de controle de qualidade do output
-Aceito sugestões de um passo a mais para garantir a qualidade.
-
 ## Sugestões de melhoria
 
 1. Introduzir camada de “Curadoria Inteligente”;
@@ -55,4 +52,14 @@ Explique melhor essa sugestão, não entendi como ela se aplica a proposição d
 Estamos lidando com um público muito vasto, então na etapa atual não podemos considerar conhecimento prévio.
 
 3. Loop de Auto-Melhoria (muito forte)
-Acho que essa seja sua solução
+Acho que essa seja sua solução para
+```
+Problemas levantados -> "3. Falta de controle de qualidade do output"
+```
+Me dê uma proposta melhor estruturado para eu entender o procedimentos sugerido.
+
+## Retorno
+
+- Correções de memória
+- Explicações solicitadas
+- Próximos passos?

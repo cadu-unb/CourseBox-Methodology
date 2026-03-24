@@ -1,345 +1,345 @@
 [
   {
-    "id": "g1",
+    "group_id": "g1",
     "FullNames": "Geração e Escrita de Textos ou Conteúdo",
     "color": "#6366f1",
     "items": [
       {
-        "id": "i1",
-        "name": "ChatGPT (OpenAI)"
+        "tool_id": "i1",
+        "tool_name": "ChatGPT (OpenAI)"
       },
       {
-        "id": "i2",
-        "name": "Gemini"
+        "tool_id": "i2",
+        "tool_name": "Gemini"
       },
       {
-        "id": "i4",
-        "name": "Grok"
+        "tool_id": "i4",
+        "tool_name": "Grok"
       },
       {
-        "id": "i5",
-        "name": "DeepSeek"
+        "tool_id": "i5",
+        "tool_name": "DeepSeek"
       },
       {
-        "id": "i6",
-        "name": "Jasper"
+        "tool_id": "i6",
+        "tool_name": "Jasper"
       }
     ]
   },
   {
-    "id": "g2",
+    "group_id": "g2",
     "FullNames": "Agêntica (Agentic AI)",
     "color": "#8b5cf6",
     "items": [
       {
-        "id": "i7",
-        "name": "Perplexity"
+        "tool_id": "i7",
+        "tool_name": "Perplexity"
       },
       {
-        "id": "i8",
-        "name": "Manus"
+        "tool_id": "i8",
+        "tool_name": "Manus"
       },
       {
-        "id": "i9",
-        "name": "GenSpark"
+        "tool_id": "i9",
+        "tool_name": "GenSpark"
       },
       {
-        "id": "i10",
-        "name": "Microsoft AutoGen"
+        "tool_id": "i10",
+        "tool_name": "Microsoft AutoGen"
       },
       {
-        "id": "id905652e",
-        "name": "Crew AI"
+        "tool_id": "id905652e",
+        "tool_name": "Crew AI"
       }
     ]
   },
   {
-    "id": "g3",
+    "group_id": "g3",
     "FullNames": "Criação e Edição de Imagens ou Design",
     "color": "#ec4899",
     "items": [
       {
-        "id": "i16",
-        "name": "Nano Banana"
+        "tool_id": "i16",
+        "tool_name": "Nano Banana"
       },
       {
-        "id": "i15",
-        "name": "Meta AI"
+        "tool_id": "i15",
+        "tool_name": "Meta AI"
       },
       {
-        "id": "i17",
-        "name": "Leonardo.ai"
+        "tool_id": "i17",
+        "tool_name": "Leonardo.ai"
       },
       {
-        "id": "i12",
-        "name": "Canva (OpenAI)"
+        "tool_id": "i12",
+        "tool_name": "Canva (OpenAI)"
       },
       {
-        "id": "i14",
-        "name": "DALL-E 3 (OpenAI)"
+        "tool_id": "i14",
+        "tool_name": "DALL-E 3 (OpenAI)"
       },
       {
-        "id": "i13",
-        "name": "Adobe Firefly"
+        "tool_id": "i13",
+        "tool_name": "Adobe Firefly"
       }
     ]
   },
   {
-    "id": "g4",
+    "group_id": "g4",
     "FullNames": "Criação e Edição de Vídeos ou Animações",
     "color": "#f43f5e",
     "items": [
       {
-        "id": "i18",
-        "name": "ElevenLabs"
+        "tool_id": "i18",
+        "tool_name": "ElevenLabs"
       },
       {
-        "id": "i19",
-        "name": "Synthesia"
+        "tool_id": "i19",
+        "tool_name": "Synthesia"
       },
       {
-        "id": "i20",
-        "name": "HeyGen"
+        "tool_id": "i20",
+        "tool_name": "HeyGen"
       },
       {
-        "id": "i21",
-        "name": "OpusClip"
+        "tool_id": "i21",
+        "tool_name": "OpusClip"
       },
       {
-        "id": "i22",
-        "name": "Veo 3 (Google AI Studio)"
+        "tool_id": "i22",
+        "tool_name": "Veo 3 (Google AI Studio)"
       }
     ]
   },
   {
-    "id": "g5",
+    "group_id": "g5",
     "FullNames": "Tradução e Aprendizado de Idiomas",
     "color": "#f97316",
     "items": [
       {
-        "id": "i23",
-        "name": "Mondly"
+        "tool_id": "i23",
+        "tool_name": "Mondly"
       },
       {
-        "id": "i24",
-        "name": "Reverso Context"
+        "tool_id": "i24",
+        "tool_name": "Reverso Context"
       },
       {
-        "id": "i25",
-        "name": "DeepL"
+        "tool_id": "i25",
+        "tool_name": "DeepL"
       },
       {
-        "id": "i26",
-        "name": "ELSA Speak"
+        "tool_id": "i26",
+        "tool_name": "ELSA Speak"
       },
       {
-        "id": "i27",
-        "name": "Duolingo"
+        "tool_id": "i27",
+        "tool_name": "Duolingo"
       }
     ]
   },
   {
-    "id": "g6",
+    "group_id": "g6",
     "FullNames": "Análise ou Visualização de Dados",
     "color": "#eab308",
     "items": [
       {
-        "id": "i28",
-        "name": "Elicit"
+        "tool_id": "i28",
+        "tool_name": "Elicit"
       },
       {
-        "id": "i29",
-        "name": "DataRobot"
+        "tool_id": "i29",
+        "tool_name": "DataRobot"
       },
       {
-        "id": "i30",
-        "name": "GPTZero"
+        "tool_id": "i30",
+        "tool_name": "GPTZero"
       },
       {
-        "id": "i31",
-        "name": "Clay"
+        "tool_id": "i31",
+        "tool_name": "Clay"
       },
       {
-        "id": "i32",
-        "name": "Google Cloud"
+        "tool_id": "i32",
+        "tool_name": "Google Cloud"
       }
     ]
   },
   {
-    "id": "g7",
+    "group_id": "g7",
     "FullNames": "Produtividade e Organização",
     "color": "#22c55e",
     "items": [
       {
-        "id": "i33",
-        "name": "Zapier"
+        "tool_id": "i33",
+        "tool_name": "Zapier"
       },
       {
-        "id": "i34",
-        "name": "ClickUp AI"
+        "tool_id": "i34",
+        "tool_name": "ClickUp AI"
       },
       {
-        "id": "i35",
-        "name": "n8n"
+        "tool_id": "i35",
+        "tool_name": "n8n"
       },
       {
-        "id": "i36",
-        "name": "Microsoft Power Apps"
+        "tool_id": "i36",
+        "tool_name": "Microsoft Power Apps"
       },
       {
-        "id": "i37",
-        "name": "Fyxer.ai"
+        "tool_id": "i37",
+        "tool_name": "Fyxer.ai"
       }
     ]
   },
   {
-    "id": "g8",
+    "group_id": "g8",
     "FullNames": "Programação e Aprendizado de Código",
     "color": "#06b6d4",
     "items": [
       {
-        "id": "i38",
-        "name": "Cursor AI"
+        "tool_id": "i38",
+        "tool_name": "Cursor AI"
       },
       {
-        "id": "i39",
-        "name": "Antigravity"
+        "tool_id": "i39",
+        "tool_name": "Antigravity"
       },
       {
-        "id": "i40",
-        "name": "Google Jules"
+        "tool_id": "i40",
+        "tool_name": "Google Jules"
       },
       {
-        "id": "i41",
-        "name": "Microsoft Copilot"
+        "tool_id": "i41",
+        "tool_name": "Microsoft Copilot"
       },
       {
-        "id": "i42",
-        "name": "GitHub Copilot"
+        "tool_id": "i42",
+        "tool_name": "GitHub Copilot"
       },
       {
-        "id": "ia3559bcd",
-        "name": "Claude (Anthropic)"
+        "tool_id": "ia3559bcd",
+        "tool_name": "Claude (Anthropic)"
       }
     ]
   },
   {
-    "id": "g9",
+    "group_id": "g9",
     "FullNames": "Educação, Tutoria e Estudo Assistido",
     "color": "#3b82f6",
     "items": [
       {
-        "id": "i44",
-        "name": "Grammarly"
+        "tool_id": "i44",
+        "tool_name": "Grammarly"
       },
       {
-        "id": "i45",
-        "name": "NotebookLM"
+        "tool_id": "i45",
+        "tool_name": "NotebookLM"
       },
       {
-        "id": "i46",
-        "name": "Microsoft Math Solver"
+        "tool_id": "i46",
+        "tool_name": "Microsoft Math Solver"
       },
       {
-        "id": "i47",
-        "name": "Teachy"
+        "tool_id": "i47",
+        "tool_name": "Teachy"
       },
       {
-        "id": "i48",
-        "name": "Khanmigo"
+        "tool_id": "i48",
+        "tool_name": "Khanmigo"
       },
       {
-        "id": "i49",
-        "name": "QuizLet"
+        "tool_id": "i49",
+        "tool_name": "QuizLet"
       }
     ]
   },
   {
-    "id": "g10",
+    "group_id": "g10",
     "FullNames": "Transcrição (áudio para texto) ou TTS (texto para áudio)",
     "color": "#14b8a6",
     "items": [
       {
-        "id": "i56",
-        "name": "Whisper (OpenAI)"
+        "tool_id": "i56",
+        "tool_name": "Whisper (OpenAI)"
       },
       {
-        "id": "i50",
-        "name": "Otter.ai"
+        "tool_id": "i50",
+        "tool_name": "Otter.ai"
       },
       {
-        "id": "i54",
-        "name": "Descript"
+        "tool_id": "i54",
+        "tool_name": "Descript"
       },
       {
-        "id": "i51",
-        "name": "Fathom"
+        "tool_id": "i51",
+        "tool_name": "Fathom"
       },
       {
-        "id": "i52",
-        "name": "Murf.ai"
+        "tool_id": "i52",
+        "tool_name": "Murf.ai"
       },
       {
-        "id": "i53",
-        "name": "Happyscribe"
+        "tool_id": "i53",
+        "tool_name": "Happyscribe"
       },
       {
-        "id": "i55",
-        "name": "Plaud"
+        "tool_id": "i55",
+        "tool_name": "Plaud"
       }
     ]
   },
   {
-    "id": "g11",
+    "group_id": "g11",
     "FullNames": "Criação de Música e Áudio",
     "color": "#a855f7",
     "items": [
       {
-        "id": "i57",
-        "name": "Suno AI"
+        "tool_id": "i57",
+        "tool_name": "Suno AI"
       },
       {
-        "id": "i58",
-        "name": "Shutterstock"
+        "tool_id": "i58",
+        "tool_name": "Shutterstock"
       },
       {
-        "id": "i59",
-        "name": "Riffusion"
+        "tool_id": "i59",
+        "tool_name": "Riffusion"
       },
       {
-        "id": "i60",
-        "name": "AIVA"
+        "tool_id": "i60",
+        "tool_name": "AIVA"
       },
       {
-        "id": "i61",
-        "name": "Resemble"
+        "tool_id": "i61",
+        "tool_name": "Resemble"
       }
     ]
   },
   {
-    "id": "g12",
+    "group_id": "g12",
     "FullNames": "Criação de Apresentações, Slides ou Roteiros",
     "color": "#d946ef",
     "items": [
       {
-        "id": "i62",
-        "name": "Gamma.app"
+        "tool_id": "i62",
+        "tool_name": "Gamma.app"
       },
       {
-        "id": "i63",
-        "name": "Microsoft Designer"
+        "tool_id": "i63",
+        "tool_name": "Microsoft Designer"
       },
       {
-        "id": "i64",
-        "name": "Beautiful.ai"
+        "tool_id": "i64",
+        "tool_name": "Beautiful.ai"
       },
       {
-        "id": "i65",
-        "name": "Prezi"
+        "tool_id": "i65",
+        "tool_name": "Prezi"
       },
       {
-        "id": "i15a5dc80",
-        "name": "Pitch"
+        "tool_id": "i15a5dc80",
+        "tool_name": "Pitch"
       }
     ]
   }
