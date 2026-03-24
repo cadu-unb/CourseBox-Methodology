@@ -121,12 +121,6 @@ Ao final desta etapa, espera-se:
 → Prontos para a etapa "Operação"  
 ```
 
-## 🚨 Ponto de Atenção
-
-Este processo assume que o operador sabe utilizar uma plataforma de IA.
-
-Caso necessário, padronize previamente a ferramenta (ex: ChatGPT, Gemini, etc.).
-
 # ⏭️ Próxima Etapa
 
 [`3_operation.md`](3_operation.md) — Lidando com a plataforma CourseBox.ai.
