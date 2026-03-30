@@ -2,7 +2,6 @@
 
 ```ts
 Array<Group>
-
 Group: {
   group_id: string,
   FullNames: string,
