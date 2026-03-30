@@ -265,6 +265,7 @@ Na etapa seguinte, cada autor de curso realizará a apuração individual das ob
 A última etapa da construção dos cursos consiste na definição manual de estrutura e design por parte dos membros responsáveis pelo design. O objetivo é realizar um refinamento estético dos cursos, aperfeiçoando sua apresentação visual e experiência de uso (vide [Personalizar](0_docs/0_methodology/7_personalize.md)).
 
 <!-- Não altere o "Quadro Resumo" -->
+
 ## ✳️ Quadro Resumo
 
 | Módulo | Título do Conteúdo | Datas | Duração | Ementa |
