@@ -1,4 +1,4 @@
-<!-- PATH: 1_src/services/text_extractor.md -->
+<!-- PATH: 1_src/arctel/services/text_extractor.md -->
 
 # 📄 PDF Text Extractor
 
@@ -199,7 +199,7 @@ project-root
 ### 📍 Serviço de Extração
 
 ```
-1_src/services/text_extractor.py
+1_src/arctel/services/text_extractor.py
 ```
 
 Responsável por:
@@ -220,7 +220,7 @@ O script pode ser executado diretamente via **linha de comando**.
 ### Extrair PDF completo
 
 ```bash
-python 1_src/services/text_extractor.py documento.pdf saida.txt
+uv run 1_src/arctel/services/text_extractor.py documento.pdf saida.txt
 ```
 
 ---
@@ -236,7 +236,7 @@ Formato:
 Exemplo:
 
 ```bash
-python 1_src/services/text_extractor.py documento.pdf saida.txt --pages "1,5,10-12"
+uv run 1_src/arctel/services/text_extractor.py documento.pdf saida.txt --pages "1,5,10-12"
 ```
 
 ---
