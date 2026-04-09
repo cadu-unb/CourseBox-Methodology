@@ -1,0 +1,501 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Source+Sans+3:wght@400;600&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #F7F7F5;
+    --bg-alt: #EEEEEA;
+    --green: #1A6B3C;
+    --blue: #2C4A6E;
+    --dark: #0F1F2E;
+    --amber: #C8860A;
+    --text: #1C1C1E;
+    --text-sec: #3A3A3C;
+    --card-bg: #DEDEDА;
+    --divider: #1A6B3C;
+    --white: #FFFFFF;
+    --f-title: 'Montserrat', sans-serif;
+    --f-body: 'Source Sans 3', sans-serif;
+  }
+
+  body { background: #1a1a1a; display: flex; flex-direction: column; align-items: center; padding: 20px; font-family: var(--f-body); }
+
+  .nav { display: flex; align-items: center; gap: 16px; margin-bottom: 16px; }
+  .nav button {
+    background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+    color: #fff; padding: 8px 20px; border-radius: 6px; cursor: pointer;
+    font-family: var(--f-body); font-size: 14px; transition: background 0.2s;
+  }
+  .nav button:hover { background: rgba(255,255,255,0.2); }
+  .nav button:disabled { opacity: 0.3; cursor: default; }
+  .nav .counter { color: rgba(255,255,255,0.6); font-size: 13px; min-width: 60px; text-align: center; }
+
+  .slide-wrap { width: 100%; max-width: 900px; aspect-ratio: 16/9; position: relative; overflow: hidden; border-radius: 4px; box-shadow: 0 20px 60px rgba(0,0,0,0.5); }
+
+  .slide { width: 100%; height: 100%; position: absolute; top: 0; left: 0; display: none; }
+  .slide.active { display: flex; }
+
+  /* ── SLIDE TYPES ── */
+
+  /* COVER */
+  .s-cover {
+    background: linear-gradient(135deg, #0F1F2E 0%, #1A3A2E 50%, #0F2A1E 100%);
+    flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; padding: 5%;
+    position: relative;
+  }
+  .s-cover::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 30% 70%, rgba(26,107,60,0.3) 0%, transparent 60%),
+                radial-gradient(ellipse at 70% 30%, rgba(44,74,110,0.3) 0%, transparent 60%);
+  }
+  .s-cover .cover-inner { position: relative; z-index: 1; }
+  .s-cover .cover-tag {
+    font-family: var(--f-body); font-size: clamp(9px,1.1vw,12px); font-weight: 600;
+    letter-spacing: 0.2em; color: rgba(255,255,255,0.5); text-transform: uppercase;
+    margin-bottom: 2.5%; border-top: 1px solid rgba(255,255,255,0.15);
+    border-bottom: 1px solid rgba(255,255,255,0.15); padding: 6px 20px; display: inline-block;
+  }
+  .s-cover h1 {
+    font-family: var(--f-title); font-weight: 700;
+    font-size: clamp(16px,2.4vw,28px); color: #fff; line-height: 1.25;
+    margin-bottom: 1.5%; max-width: 80%;
+  }
+  .s-cover .cover-sub {
+    font-family: var(--f-body); font-size: clamp(10px,1.3vw,14px);
+    color: rgba(255,255,255,0.6); margin-bottom: 1%;
+  }
+  .s-cover .cover-period {
+    font-family: var(--f-title); font-weight: 600;
+    font-size: clamp(12px,1.6vw,18px); color: #5DD99A;
+    letter-spacing: 0.05em; margin-top: 1.5%;
+  }
+  .s-cover .cover-date { font-size: clamp(9px,1vw,11px); color: rgba(255,255,255,0.35); margin-top: 2.5%; }
+
+  /* SECTION BREAK */
+  .s-section {
+    background: var(--green);
+    flex-direction: column; align-items: flex-start; justify-content: center;
+    padding: 8% 10%;
+  }
+  .s-section .sec-num {
+    font-family: var(--f-title); font-weight: 700;
+    font-size: clamp(28px,6vw,72px); color: rgba(255,255,255,0.1); line-height: 1;
+    margin-bottom: 1%;
+  }
+  .s-section h2 {
+    font-family: var(--f-title); font-weight: 700;
+    font-size: clamp(18px,2.8vw,34px); color: #fff; line-height: 1.2;
+  }
+  .s-section .sec-line { width: 60px; height: 3px; background: rgba(255,255,255,0.4); margin-top: 3%; }
+
+  /* CONTENT */
+  .s-content {
+    background: var(--bg);
+    flex-direction: column; padding: 5% 7%;
+  }
+  .s-content .slide-header {
+    border-left: 4px solid var(--green); padding-left: 16px; margin-bottom: 5%;
+  }
+  .s-content .slide-header h2 {
+    font-family: var(--f-title); font-weight: 700;
+    font-size: clamp(14px,2vw,22px); color: var(--text);
+  }
+  .s-content .slide-header .slide-tag {
+    font-family: var(--f-body); font-size: clamp(8px,0.9vw,10px);
+    text-transform: uppercase; letter-spacing: 0.15em; color: var(--green); font-weight: 600;
+  }
+  .s-content .body { flex: 1; display: flex; flex-direction: column; justify-content: center; }
+  .s-content ul { list-style: none; display: flex; flex-direction: column; gap: 2%; }
+  .s-content ul li {
+    font-family: var(--f-body); font-size: clamp(10px,1.4vw,16px); color: var(--text);
+    line-height: 1.4; display: flex; align-items: flex-start; gap: 10px;
+  }
+  .s-content ul li::before {
+    content: ''; display: block; min-width: 6px; height: 6px;
+    border-radius: 50%; background: var(--green); margin-top: 5px;
+  }
+  .s-content ul li strong { color: var(--green); font-weight: 600; }
+
+  .s-content .footer-bar {
+    display: flex; align-items: center; justify-content: space-between;
+    border-top: 1px solid rgba(26,107,60,0.2); padding-top: 2%; margin-top: 3%;
+  }
+  .s-content .footer-bar span {
+    font-family: var(--f-body); font-size: clamp(7px,0.8vw,9px);
+    color: rgba(28,28,30,0.35); letter-spacing: 0.1em; text-transform: uppercase;
+  }
+
+  /* CARDS GRID */
+  .cards-grid { display: grid; gap: 2%; }
+  .cards-grid.cols-2 { grid-template-columns: 1fr 1fr; }
+  .cards-grid.cols-4 { grid-template-columns: repeat(4,1fr); }
+  .card {
+    background: #EBEBЕ7; border-left: 3px solid var(--green);
+    border-radius: 0 6px 6px 0; padding: 4%;
+  }
+  .card.blue-accent { border-left-color: var(--blue); }
+  .card.amber-accent { border-left-color: var(--amber); }
+  .card h3 {
+    font-family: var(--f-title); font-weight: 700;
+    font-size: clamp(8px,1.1vw,12px); color: var(--green); margin-bottom: 4%;
+    text-transform: uppercase; letter-spacing: 0.1em;
+  }
+  .card h3.blue { color: var(--blue); }
+  .card ul { list-style: none; }
+  .card ul li {
+    font-family: var(--f-body); font-size: clamp(8px,1vw,11px);
+    color: var(--text-sec); line-height: 1.4; padding: 2% 0;
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+  }
+  .card ul li:last-child { border-bottom: none; }
+  .card .big-num {
+    font-family: var(--f-title); font-weight: 700;
+    font-size: clamp(22px,4vw,48px); color: var(--green); line-height: 1;
+  }
+  .card .big-num.blue { color: var(--blue); }
+  .card .big-label { font-size: clamp(7px,0.8vw,9px); color: var(--text-sec); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 2%; }
+
+  /* IMPACT SLIDE special */
+  .s-impact {
+    background: var(--bg);
+    flex-direction: column; padding: 5% 7%;
+  }
+  .s-impact .slide-header { border-left: 4px solid var(--amber); padding-left: 16px; margin-bottom: 4%; }
+  .s-impact .slide-header h2 { font-family: var(--f-title); font-weight: 700; font-size: clamp(14px,2vw,22px); color: var(--text); }
+  .s-impact .slide-header .slide-tag { font-family: var(--f-body); font-size: clamp(8px,0.9vw,10px); text-transform: uppercase; letter-spacing: 0.15em; color: var(--amber); font-weight: 600; }
+  .s-impact .metrics { display: grid; grid-template-columns: repeat(4,1fr); gap: 2%; margin-bottom: 4%; }
+  .metric-box { border: 2px solid rgb(15, 37, 58); background: rgba(0, 37, 71, 0.69); border-radius: 6px; padding: 5% 4%; text-align: center; }
+  .metric-box .m-num { font-family: var(--f-title); font-weight: 700; font-size: clamp(18px,3vw,36px); color: #35df8a; }
+  .metric-box .m-label { font-family: var(--f-body); font-size: clamp(7px,0.85vw,10px); color: rgba(255, 255, 255, 0.9); margin-top: 4%; line-height: 1.3; }
+  .s-impact .proj-list { display: grid; grid-template-columns: repeat(2,1fr); gap: 2%; }
+  .proj-item { background: #EBEBЕ7; border-radius: 4px; padding: 3% 4%; display: flex; align-items: flex-start; gap: 8px; }
+  .proj-dot { min-width: 8px; height: 8px; border-radius: 50%; background: var(--amber); margin-top: 4px; }
+  .proj-item p { font-family: var(--f-body); font-size: clamp(8px,1vw,11px); color: var(--text-sec); line-height: 1.4; }
+  .proj-item p strong { color: var(--text); font-weight: 600; }
+
+  /* CLOSING */
+  .s-close {
+    background: linear-gradient(135deg, #0F1F2E 0%, #1A3A2E 60%, #0F2A1E 100%);
+    flex-direction: column; align-items: center; justify-content: center;
+    text-align: center; padding: 6%; position: relative;
+  }
+  .s-close::before {
+    content: ''; position: absolute; inset: 0;
+    background: radial-gradient(ellipse at 50% 50%, rgba(26,107,60,0.25) 0%, transparent 70%);
+  }
+  .s-close .close-inner { position: relative; z-index: 1; }
+  .s-close .close-badge {
+    display: inline-block; background: rgba(93,217,154,0.15); border: 1px solid rgba(93,217,154,0.3);
+    border-radius: 4px; padding: 5px 16px; margin-bottom: 3%;
+    font-family: var(--f-body); font-size: clamp(8px,0.9vw,10px);
+    letter-spacing: 0.15em; text-transform: uppercase; color: #5DD99A;
+  }
+  .s-close h2 { font-family: var(--f-title); font-weight: 700; font-size: clamp(14px,2.2vw,26px); color: #fff; line-height: 1.3; margin-bottom: 3%; }
+  .s-close .close-items { display: flex; flex-direction: column; gap: 1%; margin-bottom: 4%; }
+  .s-close .close-item { font-family: var(--f-body); font-size: clamp(9px,1.1vw,13px); color: rgba(255,255,255,0.7); }
+  .s-close .close-line { width: 40px; height: 2px; background: rgba(255,255,255,0.2); margin: 3% auto; }
+  .s-close .close-thanks { font-family: var(--f-title); font-weight: 600; font-size: clamp(10px,1.3vw,15px); color: rgba(255,255,255,0.5); letter-spacing: 0.05em; }
+
+  /* DESAFIOS */
+  .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 3%; }
+  .col-box { border-radius: 6px; padding: 4% 5%; }
+  .col-box.challenge { background: rgba(44,74,110,0.08); border-left: 3px solid var(--blue); }
+  .col-box.prospect { background: rgba(26,107,60,0.08); border-left: 3px solid var(--green); }
+  .col-box h3 { font-family: var(--f-title); font-weight: 700; font-size: clamp(8px,1vw,11px); text-transform: uppercase; letter-spacing: 0.12em; margin-bottom: 4%; }
+  .col-box.challenge h3 { color: var(--blue); }
+  .col-box.prospect h3 { color: var(--green); }
+  .col-box ul { list-style: none; }
+  .col-box ul li { font-family: var(--f-body); font-size: clamp(8px,1vw,11px); color: var(--text-sec); line-height: 1.4; padding: 2.5% 0; border-bottom: 1px solid rgba(0,0,0,0.06); display: flex; gap: 8px; }
+  .col-box ul li:last-child { border-bottom: none; }
+  .col-box ul li::before { content: ''; min-width: 6px; height: 6px; border-radius: 50%; margin-top: 4px; flex-shrink: 0; }
+  .col-box.challenge ul li::before { background: var(--blue); }
+  .col-box.prospect ul li::before { background: var(--green); }
+
+  .s-content .footer-bar, .s-impact .footer-bar {
+    display: flex; align-items: center; justify-content: space-between;
+    border-top: 1px solid rgba(26,107,60,0.2); padding-top: 2%; margin-top: 3%;
+  }
+  .footer-bar span { font-family: var(--f-body); font-size: clamp(7px,0.8vw,9px); color: rgba(28,28,30,0.35); letter-spacing: 0.1em; text-transform: uppercase; }
+
+</style>
+</head>
+<body>
+
+<div class="nav">
+  <button id="prev" onclick="go(-1)" disabled>← Anterior</button>
+  <span class="counter" id="counter">1 / 10</span>
+  <button id="next" onclick="go(1)">Próximo →</button>
+</div>
+
+<div class="slide-wrap">
+
+  <!-- SLIDE 1 — CAPA -->
+  <div class="slide s-cover active" id="s1">
+    <div class="cover-inner">
+      <div class="cover-tag">Universidade de Brasília · CONSUNI</div>
+      <h1>Centro de Políticas, Direito, Economia e Tecnologias das Comunicações</h1>
+      <div class="cover-sub">Relatório de Atividades</div>
+      <div class="cover-period">2022 – 2024</div>
+      <div class="cover-date">Brasília · 2025</div>
+    </div>
+  </div>
+
+  <!-- SLIDE 2 — MISSÃO -->
+  <div class="slide s-content" id="s2">
+    <div class="slide-header">
+      <div class="slide-tag">Identidade Institucional</div>
+      <h2>Missão e Identidade do CCOM</h2>
+    </div>
+    <div class="body">
+      <ul>
+        <li>Criado pela <strong>Resolução CONSUNI nº 14/2007</strong></li>
+        <li>Foco em <strong>regulação das comunicações</strong> no Brasil</li>
+        <li>Estrutura em <strong>rede interdisciplinar</strong>, sem sede física própria</li>
+        <li>Integra docentes e pesquisadores de <strong>múltiplas áreas</strong></li>
+        <li>Produção de conhecimento aplicado à <strong>análise institucional e regulatória</strong></li>
+      </ul>
+    </div>
+    <div class="footer-bar">
+      <span>CCOM · UnB</span><span>Relatório 2022–2024</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 3 — EIXOS -->
+  <div class="slide s-content" id="s3">
+    <div class="slide-header">
+      <div class="slide-tag">Organização</div>
+      <h2>Eixos de Atuação</h2>
+    </div>
+    <div class="body">
+      <div class="cards-grid cols-2" style="height:100%">
+        <div class="card">
+          <h3>Políticas &amp; Direito</h3>
+          <ul>
+            <li>Políticas públicas de comunicação</li>
+            <li>Direito regulatório do setor</li>
+          </ul>
+        </div>
+        <div class="card blue-accent">
+          <h3 class="blue">Economia &amp; Tecnologia</h3>
+          <ul>
+            <li>Economia das comunicações</li>
+            <li>Tecnologias da informação e comunicação</li>
+          </ul>
+        </div>
+        <div class="card" style="grid-column: 1 / -1; border-left-color: var(--amber);">
+          <h3 style="color: var(--amber)">Atuação Integrada</h3>
+          <ul style="display:flex; gap:6%">
+            <li style="flex:1; border:none">Análise institucional ampla que articula os quatro eixos de forma complementar</li>
+            <li style="flex:1; border:none">Ênfase na intersecção entre regulação, inovação tecnológica e formulação de políticas</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <span>CCOM · UnB</span><span>Relatório 2022–2024</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 4 — RESULTADOS (IMPACTO MÁXIMO) -->
+  <div class="slide s-impact" id="s4">
+    <div class="slide-header">
+      <div class="slide-tag">Resultados</div>
+      <h2>Resultados Alcançados · 2022–2024</h2>
+    </div>
+    <div class="metrics">
+      <div class="metric-box"><div class="m-num">4</div><div class="m-label">Projetos Estratégicos executados</div></div>
+      <div class="metric-box"><div class="m-num">16ª</div><div class="m-label">Edição CPRLATAM realizada em Brasília</div></div>
+      <div class="metric-box"><div class="m-num">∞</div><div class="m-label">Alcance internacional da conferência</div></div>
+      <div class="metric-box"><div class="m-num">A2</div><div class="m-label">Qualis da Revista RDET</div></div>
+    </div>
+    <div class="proj-list">
+      <div class="proj-item"><div class="proj-dot"></div><p><strong>OpenRAN</strong> — Ecossistema de telecomunicações de nova geração</p></div>
+      <div class="proj-item"><div class="proj-dot"></div><p><strong>Ecossistema Digital</strong> — Regulação de plataformas e mercados digitais</p></div>
+      <div class="proj-item"><div class="proj-dot"></div><p><strong>Radiodifusão</strong> — Modernização regulatória do setor</p></div>
+      <div class="proj-item"><div class="proj-dot"></div><p><strong>Acesso Condicionado</strong> — Análise do serviço e perspectivas regulatórias</p></div>
+    </div>
+    <div class="footer-bar">
+      <span>CCOM · UnB</span><span>Relatório 2022–2024</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 5 — PARCERIAS -->
+  <div class="slide s-content" id="s5">
+    <div class="slide-header">
+      <div class="slide-tag">Cooperação</div>
+      <h2>Parcerias Institucionais</h2>
+    </div>
+    <div class="body">
+      <div class="cards-grid cols-2">
+        <div class="card">
+          <h3>Nacional</h3>
+          <ul>
+            <li>Cooperação com universidades brasileiras</li>
+            <li>Interface com órgãos reguladores e setor público</li>
+            <li>Participação em iniciativas acadêmicas nacionais</li>
+          </ul>
+        </div>
+        <div class="card blue-accent">
+          <h3 class="blue">Internacional</h3>
+          <ul>
+            <li>Integração com centros de pesquisa das Américas</li>
+            <li>Participação na rede <strong>CPRLATAM</strong></li>
+            <li>Iniciativas acadêmicas multilaterais</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <span>CCOM · UnB</span><span>Relatório 2022–2024</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 6 — PESQUISA (IMPACTO MÁXIMO) -->
+  <div class="slide s-impact" id="s6">
+    <div class="slide-header">
+      <div class="slide-tag">Pesquisa &amp; Inovação</div>
+      <h2>Projetos de Pesquisa e Inovação</h2>
+    </div>
+    <div class="metrics">
+      <div class="metric-box"><div class="m-num">4</div><div class="m-label">Projetos estratégicos no biênio</div></div>
+      <div class="metric-box"><div class="m-num">+</div><div class="m-label">Estudos técnicos e regulatórios produzidos</div></div>
+      <div class="metric-box"><div class="m-num">3</div><div class="m-label">Países envolvidos nas pesquisas</div></div>
+      <div class="metric-box"><div class="m-num">TIC</div><div class="m-label">Foco em inovação e adaptação tecnológica</div></div>
+    </div>
+    <div class="proj-list">
+      <div class="proj-item"><div class="proj-dot"></div><p><strong>OpenRAN</strong> — Redes abertas e o futuro das telecomunicações no Brasil</p></div>
+      <div class="proj-item"><div class="proj-dot"></div><p><strong>Regulação Digital</strong> — Desafios regulatórios do ecossistema digital</p></div>
+      <div class="proj-item"><div class="proj-dot"></div><p><strong>Radiodifusão</strong> — Modernização e convergência tecnológica</p></div>
+      <div class="proj-item"><div class="proj-dot"></div><p><strong>Acesso Condicionado</strong> — Análise prospectiva de regulação do setor</p></div>
+    </div>
+    <div class="footer-bar">
+      <span>CCOM · UnB</span><span>Relatório 2022–2024</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 7 — POLÍTICAS PÚBLICAS -->
+  <div class="slide s-content" id="s7">
+    <div class="slide-header">
+      <div class="slide-tag">Contribuição Institucional</div>
+      <h2>Contribuições para Políticas Públicas</h2>
+    </div>
+    <div class="body">
+      <ul>
+        <li>Apoio direto à <strong>formulação de políticas públicas</strong> de comunicações</li>
+        <li>Produção de <strong>conhecimento aplicado</strong> à regulação setorial</li>
+        <li>Subsídios técnicos para <strong>decisões institucionais fundamentadas</strong></li>
+        <li>Interface ativa com <strong>órgãos reguladores</strong> e setor público</li>
+      </ul>
+    </div>
+    <div class="footer-bar">
+      <span>CCOM · UnB</span><span>Relatório 2022–2024</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 8 — PRODUÇÃO ACADÊMICA -->
+  <div class="slide s-content" id="s8">
+    <div class="slide-header">
+      <div class="slide-tag">Academia &amp; Formação</div>
+      <h2>Produção Acadêmica e Formação</h2>
+    </div>
+    <div class="body">
+      <div class="cards-grid cols-2">
+        <div class="card">
+          <h3>Publicação</h3>
+          <ul>
+            <li>Revista de Direito, Estado e Telecomunicações — <strong>Qualis A2</strong></li>
+            <li>Relatórios e pesquisas especializadas</li>
+            <li>Integração com redes acadêmicas nacionais e internacionais</li>
+          </ul>
+        </div>
+        <div class="card blue-accent">
+          <h3 class="blue">Formação</h3>
+          <ul>
+            <li>Formação de <strong>especialistas em regulação</strong> de comunicações</li>
+            <li>Participação em programas de pós-graduação</li>
+            <li>Mentoria e desenvolvimento de pesquisadores</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <span>CCOM · UnB</span><span>Relatório 2022–2024</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 9 — DESAFIOS E PERSPECTIVAS -->
+  <div class="slide s-content" id="s9">
+    <div class="slide-header">
+      <div class="slide-tag">Análise Prospectiva</div>
+      <h2>Desafios e Perspectivas 2025–2027</h2>
+    </div>
+    <div class="body">
+      <div class="two-col">
+        <div class="col-box challenge">
+          <h3>Desafios</h3>
+          <ul>
+            <li>Ausência de estrutura física própria</li>
+            <li>Consolidação institucional contínua</li>
+          </ul>
+        </div>
+        <div class="col-box prospect">
+          <h3>Perspectivas</h3>
+          <ul>
+            <li>Ampliação de projetos internacionais</li>
+            <li>Cursos para países lusófonos</li>
+            <li>Continuidade da CPRLATAM</li>
+            <li>Expansão da pesquisa aplicada</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bar">
+      <span>CCOM · UnB</span><span>Relatório 2022–2024</span>
+    </div>
+  </div>
+
+  <!-- SLIDE 10 — CONCLUSÃO -->
+  <div class="slide s-close" id="s10">
+    <div class="close-inner">
+      <div class="close-badge">Res. CONSUNI nº 0054/2025</div>
+      <h2>O CCOM cumpre plenamente sua missão institucional, com atuação multidisciplinar e impacto relevante para a UnB e para o país.</h2>
+      <div class="close-items">
+        <div class="close-item">Atuação relevante e multidisciplinar comprovada</div>
+        <div class="close-item">Impacto acadêmico e institucional consistente</div>
+        <div class="close-item">Parecer favorável à aprovação do relatório</div>
+      </div>
+      <div class="close-line"></div>
+      <div class="close-thanks">Obrigado ao CONSUNI e à equipe do CCOM</div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  let cur = 0;
+  const slides = document.querySelectorAll('.slide');
+  const total = slides.length;
+
+  function go(dir) {
+    slides[cur].classList.remove('active');
+    cur = Math.max(0, Math.min(total - 1, cur + dir));
+    slides[cur].classList.add('active');
+    document.getElementById('counter').textContent = (cur+1) + ' / ' + total;
+    document.getElementById('prev').disabled = cur === 0;
+    document.getElementById('next').disabled = cur === total - 1;
+  }
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'ArrowRight' || e.key === 'ArrowDown') go(1);
+    if (e.key === 'ArrowLeft' || e.key === 'ArrowUp') go(-1);
+  });
+</script>
+</body>
+</html>
